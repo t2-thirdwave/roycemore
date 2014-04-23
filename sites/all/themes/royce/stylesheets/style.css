@@ -2779,3 +2779,8 @@ table.mobile-table {
   -moz-box-shadow: 0 0 0 0 #fff;
   box-shadow: 0 0 0 0 #fff;
 }
+
+/* line 1213, ../sass/partials/design/_design.scss */
+body.page-admission-international {
+  background-color: blue;
+}
