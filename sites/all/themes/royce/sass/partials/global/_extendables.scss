@@ -1,0 +1,46 @@
+////////////////////////
+// Extendables Partials
+//
+// All of your extendable classes, ids, and placeholder extendables
+//   should go in this file.
+////////////////////////
+
+.clearfix {
+	@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *zoom: 1;
+  }
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+.light-on-dark {
+
+  a {
+
+    color: white;
+    text-decoration: underline;
+
+    &:hover, &:focus {
+      color: white;
+    }
+
+    &:visited {
+      color: white;
+    }
+
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+  }
+
+}

@@ -1,0 +1,162 @@
+// Responsive
+// ------------------------------------------------
+$responsive: true !default;
+
+////////////////////////////
+// LEGACY AND EXPERIMENTAL BROWSER SUPPORT
+$legacy-support-for-ie                 : false !default;
+$legacy-support-for-ie6                : $legacy-support-for-ie;
+$legacy-support-for-ie7                : $legacy-support-for-ie;
+$legacy-support-for-ie8                : $legacy-support-for-ie;
+$experimental-support-for-mozilla      : false !default;
+$experimental-support-for-webkit       : false !default;
+$support-for-original-webkit-gradients : false !default;
+$experimental-support-for-opera        : false !default;
+$experimental-support-for-microsoft    : false !default;
+// $experimental-support-for-khtml     : false !default;
+// $experimental-support-for-svg       : false !default;
+// $experimental-support-for-pie       : false !default;
+////////////////////////////
+
+$output-elements: true !default;
+$output-selectors: true !default;
+
+// Vertical rhythm settings
+// ------------------------------------------------
+$base-font-size: 16px;
+$base-line-height: 24px;
+$round-to-nearest-half-line: true;
+
+/**
+ * inuit.css will work these next ones out for use within the framework.
+ *
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+$base-spacing-unit: $base-line-height!default;
+$half-spacing-unit: $base-spacing-unit / 2!default;
+$double-spacing-unit: $base-spacing-unit * 2!default;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+// Colour palette
+// ------------------------------------------------
+$white: white;
+
+////////////////////////
+//
+//  Color Stacks
+//
+//  We can utalize [Color Schemer](https://github.com/scottkellum/color-schemer)
+//  to build us awesome color guides.
+//
+////////////////////////
+
+$cs-primary:            #c0ff33;
+// Primary color, can be any color you can use in CSS, plus CMYK from Color Schemer
+$cs-scheme:             accented-analogic;
+// Options: mono, complement, triad, tetrad, analogic, accented-analogic
+$cs-hue-offset:         65;
+// Options: 0-100;
+$cs-brightness-offset:  0;
+// Options: 0-100;
+$cs-color-model:        ryb;
+// Options: rgb, ryb
+
+$black:     tint-stack(#212121);
+$primary:   tint-stack(cs-primary());
+$secondary: tint-stack(cs-secondary());
+$tertiary:  tint-stack(cs-tertiary());
+$quadrary:  tint-stack(cs-quadrary());
+
+
+/**
+ * COLOR
+ */
+
+// Greyscale
+$black          : rgb(0,0,0);
+$darkgrey       : lighten($black, 25%);
+$grey           : lighten($black, 50%);
+$lightgrey      : lighten($black, 75%);
+$lightergrey    : lighten($black, 90%);
+$white          : rgb(255,255,255);
+
+// Base Colors
+$textcolor : #515151;
+$basecolor      : rgb(45,53,62);
+$compcolor      : adjust-hue($basecolor, 180);
+$bordercolor    : lighten($basecolor, 60%);
+
+$brand-blue: rgb(0, 119, 197); // #0077C5
+$brand-green: rgb(119, 195, 55); // #77C337
+
+// Links
+$linkcolor          : #0284DB;
+$linkcolorhover     : darken($linkcolor, 10);
+$linkcolorvisited   : $linkcolor;
+$linkcolorfocus     : darken($linkcolorvisited, 10);
+
+// colour palettes
+$alertcolor     : rgb(252,248,227);
+$errorcolor     : rgb(218,79,73);
+$infocolor      : rgb(217,237,247);
+$inverscolor    : rgb(65,65,65);
+$successcolor   : rgb(91,183,91);
+$warningcolor   : rgb(250,167,50);
+
+$bodybackground : $white;
+
+// Default colour for objects’ borders etc.
+$base-ui-color:     #ddd!default;
+
+// Font stacks
+// ------------------------------------------------
+$base-font-family:  "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; // Base font-family
+$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Font-sizes (in pixels). Refer to relevant sections for their implementations.
+$giga-size:         96px!default;
+$mega-size:         72px!default;
+$kilo-size:         48px!default;
+
+$h1-size:           32px!default; // .alpha
+$h2-size:           24px!default; // .beta
+$h3-size:           21px!default; // .gamma
+$h4-size:           18px!default; // .delta
+$h5-size:           16px!default; // .epsilon
+$h6-size:           14px!default; // .zeta
+
+$milli-size:        12px!default;
+$micro-size:        10px!default;
+
+
+// Round corners default
+$round-corners:        4px!default;
+
+
+// Singularity
+// ------------------------
+// Grid settings
+$phonelandscapeish:      479px;
+$lapish:                 768px;
+$lapishplus:             900px;
+$deskish:                1024px;
+$deskwideish:            1200px;
+$deskwide:               1400px;
+$deskwider:              1600px;
+
+$between-landscapeish-lapish: 479px 767px;
+$between-lapishplus-deskish: 900px 1023px;
+
+
+$output: 'isolation';
+
+$grids: 8;
+$grids: add-grid(12 at $lapish);
+
+$gutters: .44444444445;
+$gutters: add-gutter(.454545456 at $lapish);
+$gutters: add-gutter(.55555556 at $deskish);
+
+
+// Breakpoints
+$breakpoint-to-ems: true;

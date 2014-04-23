@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Adds a panel pane style for simple regions and panes.
+ */
+
+/*
+ * Implements hook_ctools_plugin_directory().
+ */
+function panels_style_simple_ctools_plugin_directory($module, $plugin) {
+  if (($module == 'panels' || $module == 'ctools') && $plugin == 'styles') {
+    return 'plugins/' . $plugin;
+  }
+}
+

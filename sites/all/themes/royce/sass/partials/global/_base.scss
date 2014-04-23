@@ -1,0 +1,127 @@
+////////////////////////
+// Base Partials
+//
+// These files will be shared across all three of your output CSS files. Generally included here are only Compass Extension imports and imports for variables, functions, mixins, and extendables.
+//
+// Toolkit imports all of Compass, so there is no need to import it separately.
+////////////////////////
+
+////////////////////////
+// Compass Extensions
+////////////////////////
+@import 'singularitygs';
+@import "breakpoint";
+@import 'toolkit';
+//@import "modular-scale";
+//@import "color-schemer";
+@import 'sassy-buttons';
+
+// @import "../../../bower_components/foundation/scss/foundation/settings";
+// @import "../../../bower_components/foundation/scss/foundation";
+
+////////////////////////
+// Global config variables, colour palette, etc
+// ------------------------------------------------
+@import "../../config";
+
+@import "../../vars-typeplate";
+@import "../../../components/typeplate/scss/typeplate"; // the bower package directory and included file
+
+
+
+////////////////////////
+// Private Imports
+////////////////////////
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+@import 'extendables';
+
+html {
+//  font-family: $base-font-family;
+//  font-size: 1em;
+//  line-height: 1.5em;
+//  height: 100%;
+}
+
+body {
+  @include content-fade-in;
+  background: #FFF;
+//  color : $textcolor;
+  margin: 0;
+}
+
+a {
+
+  color: $linkcolor;
+  text-decoration: none;
+  @include transition(all 0.3s ease-in-out);
+
+  &:hover, &:focus {
+    color: $linkcolorhover;
+  }
+
+  &:visited {
+    color: $linkcolorvisited;
+  }
+
+}
+
+.ampersand { @extend %ampersand-placeholder; }
+
+
+
+ul {
+  padding-left: 24px;
+}
+
+li{
+    > ul,
+    > ol{
+         margin-bottom:0;
+     }
+}
+
+
+.burr {
+  max-width: 74em;
+  margin: 0 auto;
+}
+.burr-sidebar-inner {
+  margin-right: 48px;
+  background-color: #efefef;
+}
+
+
+.wrapper--seconditems {
+  background: lightblue;
+}
+
+.royce-homepage-section {
+  max-width: 74em;
+  margin: 0 auto;
+}
+
+.panels-ipe-editing .panels-ipe-region {
+  float: none;
+}
+
+
+.pane-bundle-spotlight .panopoly-spotlight-wrapper {
+  left: 8%;
+  bottom: 30px;
+}
+
+.pane-bundle-spotlight .panopoly-spotlight-info {
+  padding: .5em;
+  background-color: #79C142;
+  opacity: .95;
+}
+
+.field-name-field-map-address iframe {
+  width: 100%;
+}
+
+.royce-homepage__map {
+  max-width: 100%;
+}

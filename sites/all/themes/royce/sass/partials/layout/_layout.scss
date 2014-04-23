@@ -1,0 +1,38 @@
+////////////////////////
+// Layouts Partials
+//
+// Separate your Layout from Design
+// Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
+//
+// All box model properties go here
+////////////////////////
+
+@import 'wrapper';
+@import 'royce-homepage';
+@import 'royce-top-content-left';
+@import 'royce-content-left';
+@import 'royce-content-left-right';
+
+
+.royce-content__grid1 {
+  @include breakpoint($lapish) {
+    @include grid-span(6, 1, $gutter: 4);
+  }
+}
+
+.royce-content__grid2 {
+  @include breakpoint($lapish) {
+    @include grid-span(6, 7, $gutter: 4);
+  }
+}
+
+.footer-info {
+  @include breakpoint($lapish) {
+    @include grid-span(7, 1, $gutter: 4);
+  }
+}
+.footer-social {
+  @include breakpoint($lapish) {
+    @include grid-span(4, 9, $gutter: 4);
+  }
+}

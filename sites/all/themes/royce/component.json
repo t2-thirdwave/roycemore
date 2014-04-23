@@ -1,0 +1,11 @@
+{
+  "name": "royce",
+  "version": "1.0.0",
+  "dependencies": {
+    "formalize": "git://github.com/nathansmith/formalize"
+  },
+  "devDependencies": {
+    "scut": "~0.9.1",
+    "typeplate": "~1.1.2"
+  }
+}

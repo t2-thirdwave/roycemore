@@ -1,0 +1,4 @@
+name = Roycemore Module
+description = "For Roycemore specific Fieldable Panels Panes"
+core = 7.x
+version = "7.x-1.0"

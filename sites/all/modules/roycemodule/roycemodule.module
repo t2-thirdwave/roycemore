@@ -1,0 +1,76 @@
+<?php
+
+function roycemodule_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['downloads'] = array(
+    'label' => t('Downloads'),
+    'pane category' => t('Global'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'pane icon' => 'profiles/panopoly/modules/panopoly/panopoly_widgets/images/icon_file.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/downloads',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+  $entity_info['fieldable_panels_pane']['bundles']['slideshow'] = array(
+    'label' => t('Slideshow'),
+    'pane category' => t('Global'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'pane icon' => 'profiles/panopoly/modules/panopoly/panopoly_widgets/images/icon_file.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/slideshow',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+  $entity_info['fieldable_panels_pane']['bundles']['event'] = array(
+    'label' => t('Event'),
+    'pane category' => t('Global'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'pane icon' => 'profiles/panopoly/modules/panopoly/panopoly_widgets/images/icon_file.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/event',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+}
+
+function roycemodule_wysiwyg_filter_elements_blacklist_alter(&$blacklist){
+  $blacklist = array(
+    'applet',
+    'area',
+    'base',
+    'basefont',
+    'body',
+    'button',
+    'frame',
+    'frameset',
+    'head',
+    'html',
+    'isindex',
+    'label',
+    'link',
+    'map',
+    'meta',
+    'noframes',
+    'noscript',
+    'optgroup',
+    'option',
+    'script',
+    'select',
+    'style',
+    'textarea',
+    'title',
+  );
+  return $blacklist;
+}
+
+

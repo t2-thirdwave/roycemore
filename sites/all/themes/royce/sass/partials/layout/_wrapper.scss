@@ -1,0 +1,99 @@
+.wrapper {
+  @extend %clearfix;
+}
+
+.wrapper--main {
+  @extend %clearfix;
+}
+
+.wrapper--slider {
+
+}
+
+.wrapper--update {
+  background: #CDEBFE;
+  background: rgba(205, 235, 254, 0.80);
+//  background: rgba(255,255,255,0.5);
+}
+
+.wrapper--special {
+  background: #E6F5FF;
+  background: rgba(230, 245, 255, 0.75);
+//  background: rgba(255,255,255,0.3);
+}
+
+.wrapper--video {
+  background: #CDEBFE;
+  background: rgba(205, 235, 254, 0.80);
+//  background: rgba(255,255,255,0.5);
+}
+
+.wrapper--footer {
+  background-color: $brand-blue;
+  color: white;
+
+  .royce-container {
+    padding: 36px 0;
+  }
+
+}
+
+.royce-container {
+
+  @extend %clearfix;
+
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+
+  @include breakpoint($phonelandscapeish) {
+    max-width: 90%;
+  }
+
+  @include breakpoint($deskish) {
+    max-width: 60rem;
+  }
+
+  @include breakpoint($deskwideish) {
+    max-width: 72em;
+  }
+
+  @include breakpoint($deskwide) {
+    max-width: 74em;
+  }
+
+}
+
+.whelan-container {
+  @extend .royce-container;
+}
+
+.pane-bundle-slideshow .royce-container, .view-mode-program_spotlight .royce-container {
+  width: 100%;
+  max-width: 100%;
+
+  @include breakpoint($lapish) {
+    max-width: 90%;
+  }
+
+  @include breakpoint($deskish) {
+    max-width: 60rem;
+  }
+
+  @include breakpoint($deskwideish) {
+    max-width: 72em;
+  }
+
+  @include breakpoint($deskwide) {
+    max-width: 74em;
+  }
+
+}
+#header .royce-container {
+  width: 90%;
+  max-width: 90%;
+}
+
+.pane-bundle-slideshow ul.slides {
+  background: $brand-blue;
+}
