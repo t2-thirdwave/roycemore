@@ -68,9 +68,8 @@
 ?>
 
 <?php if ($is_front): ?>
-
   <header id="header" class="header--is-hidden" role="banner">
-    <div class="royce-container">
+    <div class="l-container">
       <div class="header__inner">
         <div class="logo">
           <div class="logo-inside">
@@ -88,7 +87,7 @@
 
 <?php else: ?>
   <header id="header" role="banner">
-    <div class="royce-container">
+    <div class="l-container">
       <div class="header__inner">
         <div class="logo">
           <div class="logo-inside">
@@ -120,7 +119,7 @@
 
 <?php if ($page['footer']): ?>
   <div class="wrapper--footer light-on-dark" role="contentinfo">
-    <div class="royce-container">
+    <div class="l-container">
       <div class="footer-info">
         <?php print render($page['footer']); ?>
       </div>

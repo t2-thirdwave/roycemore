@@ -30,7 +30,7 @@
 <main id="main" role="main" class="wrapper--main">
 
   <div class="wrapper wrapper--content">
-    <div class="royce-container">
+    <div class="l-container">
 
 
 <div class="<?php print $classes; ?>">

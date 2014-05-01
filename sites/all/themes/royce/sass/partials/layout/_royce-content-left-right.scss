@@ -1,6 +1,6 @@
-.royce-content-left-right {
+.l-content-left-right {
 
-  .royce-content__section {
+  .l-content__section {
 
     @include grid-span(12, 1, 12);
 
@@ -11,12 +11,12 @@
   }
 }
 
-.royce-content__aside-one {
+.l-content__aside-one {
   @include breakpoint($lapishplus) {
     @include grid-span(3, 1, $gutter: 4);
   }
 }
-.royce-content__aside-two {
+.l-content__aside-two {
   @include breakpoint($lapishplus) {
     @include grid-span(4, 9, $gutter: 4);
   }

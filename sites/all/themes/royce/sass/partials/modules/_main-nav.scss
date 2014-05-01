@@ -1,0 +1,108 @@
+.block-superfish {
+
+  @include grid-span(1, 4, 4);
+  @include scut-vcenter-td(".content");
+  height: scut-rem(78px);
+
+  @include breakpoint($lapish) {
+
+  }
+
+  @include breakpoint($deskish) {
+    @include grid-span(9, 4);
+    display: block;
+  }
+
+  @include breakpoint($deskwideish) {
+    @include grid-span(8, 5);
+  }
+
+  .content {
+    @extend %clearfix;
+    padding: 0;
+  }
+
+  .sf-horizontal {
+    @extend %clearfix;
+    padding: 0;
+    display: table;
+    width: 100%;
+  }
+
+  ul.menu li {
+    padding: 0;
+    margin: 0;
+  }
+  .sf-menu li {
+
+  }
+
+  .sf-depth-1 {
+    color: white;
+    display: table-cell;
+    float: none;
+    height: scut-rem(78px);
+    line-height: scut-rem(78px);
+    text-align: center;
+    width: 16.666666667%;
+
+    &:hover {
+      background: $brand-green;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    ul {
+      background: $brand-green;
+      padding: 24px;
+    }
+
+  }
+
+  .sf-depth-2 {
+    line-height: scut-rem(36px);
+    background: $brand-green;
+    color: white;
+    text-align: left;
+  }
+
+  a.sf-depth-2.active {
+    color: white;
+    color: rgba(0,0,0,0.4);
+  }
+
+  a:hover.sf-depth-2 {
+    color: white;
+    color: rgba(0,0,0,0.4);
+  }
+
+}
+
+.ff-pos {
+  position:relative;
+}
+
+.sf-menu ul {
+  min-width: 18em;
+}
+
+.sf-menu li:hover > div.ff-pos ul,
+.sf-menu li.sfHover > div.ff-pos ul {
+  left: 0;
+  top: 0;
+}
+
+
+.block-superfish > .content {
+
+  @include breakpoint($deskish) {
+    display: block;
+  }
+
+}
+
+.flexslider .slides > li {
+  position: relative;
+}

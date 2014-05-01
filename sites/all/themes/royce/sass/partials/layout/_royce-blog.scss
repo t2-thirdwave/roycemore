@@ -1,0 +1,47 @@
+.royce-blog {
+  .royce-content__header {
+
+    .royce-container {
+      max-width: 90%;
+
+      @include breakpoint($lapish) {
+        max-width: 40rem;
+      }
+    }
+
+    .panel-pane {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint($lapish) {
+      // @include grid-span(12, 1, 12);
+    }
+  }
+  .royce-content__image {
+
+    .royce-container {
+      max-width: 56rem;
+    }
+
+  }
+  .royce-content__body {
+
+    .royce-container {
+      max-width: 90%;
+
+      @include breakpoint($lapish) {
+        max-width: 40rem;
+      }
+
+    }
+
+    .field-body {
+      font-size: 16px;
+      @include breakpoint($lapish) {
+        font-size: 18px;
+      }
+    }
+
+  }
+}
+

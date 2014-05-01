@@ -1,0 +1,25 @@
+.logo {
+
+  @include grid-span(3, 1, 4);
+
+  @include breakpoint($lapish) {
+    @include grid-span(2, 1, 4);
+  }
+
+  @include breakpoint($deskish) {
+    @include grid-span(3, 1);
+  }
+
+  @include breakpoint($deskwideish) {
+    @include grid-span(4, 1);
+  }
+
+  @include scut-vcenter-td(".logo-inside");
+  height: scut-rem(78px);
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+}

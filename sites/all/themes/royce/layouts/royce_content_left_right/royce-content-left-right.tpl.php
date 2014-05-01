@@ -10,30 +10,30 @@
  */
 ?>
 
-<main id="main" role="main" class="wrapper--main panel-layout royce-content-left-right <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print 'id="' . $css_id . '"'; } ?>>
+<main id="main" role="main" class="wrapper--main panel-layout l-content-left-right <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print 'id="' . $css_id . '"'; } ?>>
 
   <div class="wrapper wrapper--content">
-    <div class="royce-container">
+    <div class="l-container">
 
-      <section class="royce-content__section">
+      <section class="l-content__section">
 
-        <div class="royce-content__inner">
+        <div class="l-content__inner">
           <?php print $content['content-section']; ?>
         </div>
 
       </section>
 
-      <aside class="royce-content__aside-one">
+      <aside class="l-content__aside-one">
 
-        <div class="royce-content__inner">
+        <div class="l-content__inner">
           <?php print $content['content-aside-one']; ?>
         </div>
 
       </aside>
 
-      <aside class="royce-content__aside-two">
+      <aside class="l-content__aside-two">
 
-        <div class="royce-content__inner">
+        <div class="l-content__inner">
           <?php print $content['content-aside-two']; ?>
         </div>
 

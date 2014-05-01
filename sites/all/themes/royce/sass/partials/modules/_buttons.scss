@@ -94,3 +94,9 @@ $btn-whitespace: 20px !default;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+// ----- Simple ----- //
+.button--simple {
+  border: 1px solid;
+  padding: 12px;
+}

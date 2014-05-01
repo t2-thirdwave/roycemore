@@ -10,10 +10,10 @@
  */
 ?>
 
-<main id="main" role="main" class="wrapper--main panel-layout royce-top-3grid-bottom <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print 'id="' . $css_id . '"'; } ?>>
+<main id="main" role="main" class="wrapper--main panel-layout l-top-3grid-bottom <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print 'id="' . $css_id . '"'; } ?>>
 
   <div class="wrapper wrapper--content">
-    <div class="royce-container">
+    <div class="l-container">
 
       <section class="royce-content__section">
 
@@ -25,15 +25,15 @@
 
           <?php if (!empty($content['specialitem1'])): ?>
             <div class="3grid clearfix">
-            <div class="royce-homepage__special1">
-              <?php print $content['specialitem1']; ?>
-            </div>
-            <div class="royce-homepage__special2">
-              <?php print $content['specialitem2']; ?>
-            </div>
-            <div class="royce-homepage__special3">
-              <?php print $content['specialitem3']; ?>
-            </div>
+              <div class="l-grid3-1">
+                <?php print $content['specialitem1']; ?>
+              </div>
+              <div class="l-grid3-2">
+                <?php print $content['specialitem2']; ?>
+              </div>
+              <div class="l-grid3-3">
+                <?php print $content['specialitem3']; ?>
+              </div>
             </div>
           <?php endif; ?>
 

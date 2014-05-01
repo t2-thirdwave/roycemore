@@ -1,0 +1,26 @@
+.field-slide-text {
+
+  @extend .light-on-dark;
+
+  color: #FFF;
+  background: $brand-blue;
+  background: rgba($brand-blue, 0.8);
+  padding: 24px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+  @include breakpoint($lapish) {
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+    max-width: 24rem;
+    padding: 24px;
+  }
+
+}
+
+.pane-bundle-slideshow {
+  margin-bottom: 0;
+}

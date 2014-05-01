@@ -1,0 +1,10 @@
+.footer-info {
+  @include breakpoint($lapish) {
+    @include grid-span(7, 1, $gutter: 4);
+  }
+}
+.footer-social {
+  @include breakpoint($lapish) {
+    @include grid-span(4, 9, $gutter: 4);
+  }
+}

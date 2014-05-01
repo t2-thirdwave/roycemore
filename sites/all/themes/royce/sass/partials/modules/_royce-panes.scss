@@ -1,0 +1,99 @@
+// -------------------------------------
+//   Roycemore Styles for Panes
+// -------------------------------------
+
+// ----- Default Pane Styles ----- //
+.panel-pane {
+  margin-bottom: 3rem;
+}
+.panel-pane:last-child {
+  // margin-bottom: 0;
+}
+
+.pane-bundle-map iframe {
+  width: 100%;
+}
+
+
+
+// ----- Simple ----- //
+.pane--simple {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+// ----- Padded ----- //
+.pane--padded {
+  padding: 1.5rem;
+}
+
+
+// ----- White ----- //
+.pane--white {
+  background-color: white;
+}
+
+
+// ----- Green ----- //
+.pane--green {
+  @extend .light-on-dark;
+  background-color: $brand-green;
+  color: white;
+  color: rgba(255,255,255,0.75);
+
+  h2 {
+    color: white;
+    color: rgba(255,255,255,0.9);
+  }
+
+}
+
+
+// ----- Light Grey ----- //
+.pane--lightgrey {
+  background-color: #efefef;
+}
+
+
+// ----- Roycemore's Sub-menu ----- //
+.pane--menu {
+  padding: 24px;
+  background: #fafafa;
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  ul.menu {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      list-style: none;
+
+      a {
+        display: block;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 2px 12px 2px 0;
+      }
+
+      a.active {
+        color: black;
+      }
+
+    }
+
+  }
+
+  li.expanded,
+  li.collapsed,
+  li.leaf {
+    padding: 0;
+    margin: 0;
+  }
+
+}
+
+

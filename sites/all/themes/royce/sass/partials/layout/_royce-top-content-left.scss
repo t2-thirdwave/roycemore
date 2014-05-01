@@ -1,17 +1,16 @@
-.royce-top-content-left {
-  .wrapper--content .royce-container {
+.l-top-content-left {
+  .wrapper--content .l-container {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-  .royce-content__section {
+  .l-content__section {
     @include breakpoint($lapish) {
       @include grid-span(7, 1);
     }
   }
-  .royce-content__aside {
+  .l-content__aside {
     @include breakpoint($lapish) {
       @include grid-span(4, 9);
     }
   }
 }
-

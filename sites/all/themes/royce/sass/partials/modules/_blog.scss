@@ -1,0 +1,163 @@
+.page-blog {
+
+  .royce-content__aside {
+
+    .views-exposed-form .views-exposed-widget {
+      float: none;
+      padding: 0 1em 0 0;
+    }
+
+    .views-exposed-form .views-submit-button {
+      float: left;
+      padding: 0 1em 0 0;
+    }
+
+    .views-exposed-form .views-reset-button {
+      float: left;
+      padding: 0 1em 0 0;
+
+      .btn--a, .form-submit {
+        background: #F0F0F0;
+        color: #AAA;
+      }
+
+    }
+
+  }
+
+}
+
+.royce-blog--teaser {
+  margin-bottom: 6rem;
+  padding-bottom: 1.5rem;
+  box-shadow: 0px 12px 12px -12px rgba(0, 0, 0, 0.26);
+
+  .royce-content__header {
+
+    .panel-pane {
+      margin-bottom: 1.5rem;
+    }
+
+    img.panopoly-image-video {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .pane-node-title {
+      margin-bottom: 0;
+      padding: 24px;
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+
+  .royce-content__teaser {
+
+    .panel-pane {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+
+.royce-content__teaser {
+  padding: 0 24px;
+
+  .pane-content {
+    font-size: 18px;
+  }
+
+  .pane-node-links {
+    text-align: right;
+    padding: 12px 12px 0;
+
+    ul.inline li {
+      padding: 0;
+    }
+
+    .node-readmore a {
+      border-radius: 2px;
+      border: 0;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 16px;
+      padding: 10px 30px;
+      text-align: center;
+      text-decoration: none;
+      background: #77C337;
+      color: #FFF;
+    }
+
+  }
+
+}
+
+.royce-content__info {
+
+  @extend %clearfix;
+  border-bottom: 1px solid #EEE;
+  margin-bottom: 1.5rem;
+  padding: 0 24px 24px;
+
+  .panel-pane {
+    margin-bottom: 0;
+  }
+
+  .royce-content__author {
+    @include grid-span(4, 1, 12);
+
+    h2 {
+      display: none;
+    }
+
+    .field-author-photo {
+      width: 30%;
+      float: left;
+
+      img {
+        border-radius: 6px;
+        border: 1px solid #D1D1D1;
+        padding: 0;
+      }
+    }
+
+    .field-author-name {
+      width: 70%;
+      float: left;
+      font-size: 16px;
+      line-height: 16px;
+      padding-top: 16px;
+      padding-left: 12px;
+    }
+
+  }
+  .royce-content__date {
+    @include grid-span(2, 5, 12);
+
+    .pane-content {
+      font-size: 14px;
+      line-height: 16px;
+      padding-top: 16px;
+    }
+
+  }
+  .royce-content__categories {
+    @include grid-span(4, 7, 12);
+
+    .pane-content {
+      font-size: 14px;
+      line-height: 16px;
+      padding-top: 16px;
+    }
+
+  }
+  .royce-content__social {
+    @include grid-span(2, 11, 12);
+  }
+
+}

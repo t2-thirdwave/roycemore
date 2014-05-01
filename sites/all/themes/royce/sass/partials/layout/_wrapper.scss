@@ -1,47 +1,67 @@
+// -------------------------------------
+//   Site Wrappers for Regions
+// -------------------------------------
+
 .wrapper {
   @extend %clearfix;
 }
 
+
+// ----- Header ----- //
+.wrapper--header {
+  .pane-bundle-image {
+    margin-bottom: 0;
+  }
+}
+
+// ----- Slideshow ----- //
+.wrapper--slider {}
+
+// ----- Main #main ----- //
 .wrapper--main {
   @extend %clearfix;
 }
-
-.wrapper--slider {
-
+.not-front  {
+  .wrapper--main {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .wrapper--main.l-top-content-left {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
+// ----- Homepage Updates - 4 columns ----- //
 .wrapper--update {
   background: #CDEBFE;
   background: rgba(205, 235, 254, 0.80);
-//  background: rgba(255,255,255,0.5);
 }
 
+// ----- Homepage Special - 3 columns ----- //
 .wrapper--special {
   background: #E6F5FF;
   background: rgba(230, 245, 255, 0.75);
-//  background: rgba(255,255,255,0.3);
 }
 
+// ----- Homepage Video - 3 columns ----- //
 .wrapper--video {
   background: #CDEBFE;
   background: rgba(205, 235, 254, 0.80);
-//  background: rgba(255,255,255,0.5);
 }
 
+// ----- Footer ----- //
 .wrapper--footer {
   background-color: $brand-blue;
   color: white;
-
-  .royce-container {
+  .l-container {
     padding: 36px 0;
   }
-
 }
 
-.royce-container {
-
+// ----- Max Width Container ----- //
+.l-container {
   @extend %clearfix;
-
   position: relative;
   max-width: 80%;
   margin: 0 auto;
@@ -65,10 +85,11 @@
 }
 
 .whelan-container {
-  @extend .royce-container;
+  // @extend .l-container;
 }
 
-.pane-bundle-slideshow .royce-container, .view-mode-program_spotlight .royce-container {
+// ----- Max Width Slideshow Container ----- //
+.pane-bundle-slideshow .l-container, .view-mode-program_spotlight .l-container {
   width: 100%;
   max-width: 100%;
 
@@ -89,11 +110,14 @@
   }
 
 }
-#header .royce-container {
+
+// ----- Max Width #header ----- //
+#header .l-container {
   width: 90%;
   max-width: 90%;
 }
 
+// ----- Slideshow Background ----- //
 .pane-bundle-slideshow ul.slides {
   background: $brand-blue;
 }

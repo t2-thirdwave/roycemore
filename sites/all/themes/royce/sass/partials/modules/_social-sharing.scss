@@ -1,0 +1,53 @@
+.royce-facebook, .royce-twitter {
+  background-image: url(/sites/all/themes/royce/images/Facebook.svg);
+  text-indent: -9999em;
+  display: inline-block;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+  margin: 0 12px;
+
+  a {
+    display: block;
+  }
+
+}
+
+.royce-twitter {
+  background-image: url(/sites/all/themes/royce/images/Twitter.svg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  margin: 0;
+}
+
+.footer-social {
+  text-align: center;
+  margin-top: 48px;
+  h2 {
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    font-size: 21px;
+  }
+
+  @include breakpoint($lapish) {
+    margin-top: 0;
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  .royce-facebook, .royce-twitter {
+    height: 48px;
+    width: 48px;
+    background-size: 48px;
+
+    a {
+      line-height: 48px;
+    }
+
+  }
+
+}

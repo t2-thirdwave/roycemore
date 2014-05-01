@@ -37,12 +37,7 @@
 @import 'mixins';
 @import 'extendables';
 
-html {
-//  font-family: $base-font-family;
-//  font-size: 1em;
-//  line-height: 1.5em;
-//  height: 100%;
-}
+html {}
 
 body {
   @include content-fade-in;
@@ -125,3 +120,8 @@ li{
 .royce-homepage__map {
   max-width: 100%;
 }
+
+
+
+
+@import 'typography';

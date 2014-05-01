@@ -10,26 +10,26 @@
  */
 ?>
 
-<main id="main" role="main" class="wrapper--main panel-layout royce-top-content-left <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print 'id="' . $css_id . '"'; } ?>>
+<main id="main" role="main" class="wrapper--main panel-layout l-top-content-left <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print 'id="' . $css_id . '"'; } ?>>
 
   <div class="wrapper wrapper--header" style="position: relative;">
     <?php print $content['content-header']; ?>
   </div>
 
   <div class="wrapper wrapper--content">
-    <div class="royce-container">
+    <div class="l-container">
 
-      <section class="royce-content__section">
+      <section class="l-content__section">
 
-        <div class="royce-content__inner">
+        <div class="l-content__inner">
           <?php print $content['content-section']; ?>
         </div>
 
       </section>
 
-      <aside class="royce-content__aside">
+      <aside class="l-content__aside">
 
-        <div class="royce-content__inner">
+        <div class="l-content__inner">
           <?php print $content['content-aside']; ?>
         </div>
 

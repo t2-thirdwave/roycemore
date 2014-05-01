@@ -107,6 +107,11 @@ html {
 
 /* line 529, ../components/typeplate/scss/_typeplate.scss */
 body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
   color: #444444;
 }
 
@@ -455,7 +460,7 @@ p + .drop-cap {
   color: white;
 }
 
-/* line 47, ../sass/partials/global/_base.scss */
+/* line 42, ../sass/partials/global/_base.scss */
 body {
   opacity: 1;
   -webkit-transition: opacity 1s;
@@ -470,7 +475,7 @@ body {
   opacity: 0;
 }
 
-/* line 54, ../sass/partials/global/_base.scss */
+/* line 49, ../sass/partials/global/_base.scss */
 a {
   color: #0284db;
   text-decoration: none;
@@ -479,73 +484,82 @@ a {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 60, ../sass/partials/global/_base.scss */
+/* line 55, ../sass/partials/global/_base.scss */
 a:hover, a:focus {
   color: #0266a8;
 }
-/* line 64, ../sass/partials/global/_base.scss */
+/* line 59, ../sass/partials/global/_base.scss */
 a:visited {
   color: #0284db;
 }
 
-/* line 74, ../sass/partials/global/_base.scss */
+/* line 69, ../sass/partials/global/_base.scss */
 ul {
   padding-left: 24px;
 }
 
-/* line 80, ../sass/partials/global/_base.scss */
+/* line 75, ../sass/partials/global/_base.scss */
 li > ul,
 li > ol {
   margin-bottom: 0;
 }
 
-/* line 86, ../sass/partials/global/_base.scss */
+/* line 81, ../sass/partials/global/_base.scss */
 .burr {
   max-width: 74em;
   margin: 0 auto;
 }
 
-/* line 90, ../sass/partials/global/_base.scss */
+/* line 85, ../sass/partials/global/_base.scss */
 .burr-sidebar-inner {
   margin-right: 48px;
   background-color: #efefef;
 }
 
-/* line 96, ../sass/partials/global/_base.scss */
+/* line 91, ../sass/partials/global/_base.scss */
 .wrapper--seconditems {
   background: lightblue;
 }
 
-/* line 100, ../sass/partials/global/_base.scss */
+/* line 95, ../sass/partials/global/_base.scss */
 .royce-homepage-section {
   max-width: 74em;
   margin: 0 auto;
 }
 
-/* line 105, ../sass/partials/global/_base.scss */
+/* line 100, ../sass/partials/global/_base.scss */
 .panels-ipe-editing .panels-ipe-region {
   float: none;
 }
 
-/* line 110, ../sass/partials/global/_base.scss */
+/* line 105, ../sass/partials/global/_base.scss */
 .pane-bundle-spotlight .panopoly-spotlight-wrapper {
   left: 8%;
   bottom: 30px;
 }
 
-/* line 115, ../sass/partials/global/_base.scss */
+/* line 110, ../sass/partials/global/_base.scss */
 .pane-bundle-spotlight .panopoly-spotlight-info {
   padding: .5em;
   background-color: #79C142;
   opacity: .95;
 }
 
-/* line 121, ../sass/partials/global/_base.scss */
+/* line 116, ../sass/partials/global/_base.scss */
 .field-name-field-map-address iframe {
   width: 100%;
 }
 
-/* line 125, ../sass/partials/global/_base.scss */
+/* line 120, ../sass/partials/global/_base.scss */
 .royce-homepage__map {
   max-width: 100%;
+}
+
+/* line 6, ../sass/partials/global/_typography.scss */
+.pane-bundle-text .pane-content {
+  font-family: "proxima-nova-soft";
+}
+/* line 9, ../sass/partials/global/_typography.scss */
+.pane-bundle-text .pane-content p {
+  font-size: 18px;
 }

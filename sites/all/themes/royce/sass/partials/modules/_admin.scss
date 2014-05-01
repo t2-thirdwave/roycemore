@@ -1,0 +1,78 @@
+// -------------------------------------
+//   Admin Theme Mods
+// -------------------------------------
+
+// ----- Push IPE Down ----- //
+.page-hp .panels-ipe-editing #panels-ipe-regionid-header,
+.not-front .panels-ipe-editing .wrapper--main.royce-top-content-left {
+  padding-top: 5rem;
+}
+
+// ----- Form action button styling ----- //
+#modal-content a.button {
+  border: 1px solid #ccc;
+  margin-bottom: .5em;
+  margin-right: 1em;
+  // font: bold 12px/32px 'Open Sans', 'Lucida Sans', 'Lucida Grande',  verdana sans-serif;
+  text-decoration: none;
+  height: 33px;
+  color: #666;
+  cursor: pointer;
+  outline: none;
+  -moz-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #FAFAFA;
+  background-image: linear-gradient(bottom, #E9EAEC 0%, #FAFAFA 100%);
+  background-image: -o-linear-gradient(bottom, #E9EAEC 0%, #FAFAFA 100%);
+  background-image: -moz-linear-gradient(bottom, #E9EAEC 0%, #FAFAFA 100%);
+  background-image: -webkit-linear-gradient(bottom, #E9EAEC 0%, #FAFAFA 100%);
+  background-image: -ms-linear-gradient(bottom, #E9EAEC 0%, #FAFAFA 100%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0, #E9EAEC),
+  color-stop(1, #FAFAFA)
+  );
+  -webkit-box-shadow: 0 3px 3px 0 #d2d2d2;
+  -moz-box-shadow: 0 3px 3px 0 #d2d2d2;
+  box-shadow: 0 3px 3px 0 #d2d2d2;
+  padding: 0 13px 1px;
+}
+
+#modal-content a.button:hover {
+  background: #E6E6E6;
+  background-image: linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
+  background-image: -o-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
+  background-image: -moz-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
+  background-image: -webkit-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
+  background-image: -ms-linear-gradient(bottom, #C5C5C5 0%, #FAFAFA 100%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0, #C5C5C5),
+  color-stop(1, #FAFAFA)
+  );
+}
+
+#modal-content a.button:active {
+  outline: none;
+  background-image: linear-gradient(bottom, #E9EAEC 0%, #FAFAFA 100%);
+  background-image: -o-linear-gradient(bottom, #E9EAEC 0%, #FAFAFA 100%);
+  background-image: -moz-linear-gradient(bottom, #E9EAEC 0%, #FAFAFA 100%);
+  background-image: -webkit-linear-gradient(bottom, #E9EAEC 0%, #FAFAFA 100%);
+  background-image: -ms-linear-gradient(bottom, #E9EAEC 0%, #FAFAFA 100%);
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0, #E9EAEC),
+  color-stop(1, #FAFAFA)
+  );
+  -webkit-box-shadow: 0 0 0 0 #fff;
+  -moz-box-shadow: 0 0 0 0 #fff;
+  box-shadow: 0 0 0 0 #fff;
+}

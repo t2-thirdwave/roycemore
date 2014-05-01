@@ -8,31 +8,129 @@
 ////////////////////////
 
 @import 'wrapper';
-@import 'royce-homepage';
-@import 'royce-top-content-left';
+@import 'royce-blog';
+@import 'royce-centered';
 @import 'royce-content-left';
 @import 'royce-content-left-right';
+@import 'royce-homepage';
+@import 'royce-top-content-left';
+@import 'footer';
 
 
-.royce-content__grid1 {
+// ----- Grid with 2 Columns ----- //
+.l-content__grid1 {
   @include breakpoint($lapish) {
     @include grid-span(6, 1, $gutter: 4);
   }
 }
 
-.royce-content__grid2 {
+.l-content__grid2 {
   @include breakpoint($lapish) {
     @include grid-span(6, 7, $gutter: 4);
   }
 }
 
-.footer-info {
-  @include breakpoint($lapish) {
-    @include grid-span(7, 1, $gutter: 4);
+
+// ----- Grid with 3 Columns ----- //
+.l-3grid {
+  @extend %clearfix;
+}
+
+.l-grid3 {
+  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+
+  @include breakpoint($phonelandscapeish) {
+    border-bottom: none;
+  }
+
+  @include breakpoint($lapishplus) {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+}
+
+.l-grid3-1 {
+  @extend .l-grid3;
+
+  @include breakpoint($phonelandscapeish) {
+    @include grid-span(6, 1, 12, $gutter: 8);
+  }
+
+  @include breakpoint($lapishplus) {
+    @include grid-span(4, 1, $gutter: 4);
+  }
+
+}
+
+.l-grid3-2 {
+  @extend .l-grid3;
+
+  @include breakpoint($phonelandscapeish) {
+    @include grid-span(6, 7, 12, $gutter: 8);
+  }
+
+  @include breakpoint($lapishplus) {
+    @include grid-span(4, 5, $gutter: 4);
+  }
+
+}
+
+.l-grid3-3 {
+
+  @include breakpoint($phonelandscapeish) {
+    @include grid-span(12, 1, 12);
+    clear: both;
+  }
+
+  @include breakpoint($lapishplus) {
+    @include grid-span(4, 9, $gutter: 4);
+  }
+
+}
+
+
+// ----- Grid with 4 Columns ----- //
+.l-4grid {
+  @extend %clearfix;
+}
+
+.l-grid4-1 {
+  @include breakpoint($phonelandscapeish) {
+    @include grid-span(6, 1, 12);
+  }
+  @include breakpoint($deskish) {
+    @include grid-span(3, 1);
   }
 }
-.footer-social {
-  @include breakpoint($lapish) {
-    @include grid-span(4, 9, $gutter: 4);
+
+.l-grid4-2 {
+  @include breakpoint($phonelandscapeish) {
+    @include grid-span(6, 7, 12);
+  }
+  @include breakpoint($deskish) {
+    @include grid-span(3, 4);
+  }
+}
+
+.l-grid4-3 {
+  @include breakpoint($phonelandscapeish) {
+    @include grid-span(6, 1, 12);
+    clear: both;
+  }
+  @include breakpoint($deskish) {
+    @include grid-span(3, 7);
+  }
+}
+
+.l-grid4-4 {
+  @include breakpoint($phonelandscapeish) {
+    @include grid-span(6, 7, 12);
+  }
+  @include breakpoint($deskish) {
+    @include grid-span(3, 10);
   }
 }

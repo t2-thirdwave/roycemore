@@ -17,27 +17,27 @@
 <?php if (!empty($content['update1'])): ?>
 
   <div class="wrapper wrapper--update">
-    <section class="royce-container royce-homepage__section">
+    <section class="l-container royce-homepage__section">
 
-      <div class="royce-homepage__update1">
+      <div class="l-grid4-1">
         <div class="royce-homepage-inner">
           <?php print $content['update1']; ?>
         </div>
       </div>
 
-      <div class="royce-homepage__update2">
+      <div class="l-grid4-2">
         <div class="royce-homepage-inner">
           <?php print $content['update2']; ?>
         </div>
       </div>
 
-      <div class="royce-homepage__update3">
+      <div class="l-grid4-3">
         <div class="royce-homepage-inner">
           <?php print $content['update3']; ?>
         </div>
       </div>
 
-      <div class="royce-homepage__update4">
+      <div class="l-grid4-4">
         <div class="royce-homepage-inner">
           <?php print $content['update4']; ?>
         </div>
@@ -51,21 +51,21 @@
 <?php if ($content['specialitem1'] || $content['specialitem2']|| $content['specialitem3']): ?>
 
   <div class="wrapper wrapper--special">
-    <section class="royce-container royce-homepage__section">
+    <section class="l-container royce-homepage__section">
 
-      <div class="royce-homepage__special1">
+      <div class="l-grid3-1">
         <div class="royce-homepage-inner">
           <?php print $content['specialitem1']; ?>
         </div>
       </div>
 
-      <div class="royce-homepage__special2">
+      <div class="l-grid3-2">
         <div class="royce-homepage-inner">
           <?php print $content['specialitem2']; ?>
         </div>
       </div>
 
-      <div class="royce-homepage__special3">
+      <div class="l-grid3-3">
         <div class="royce-homepage-inner">
           <?php print $content['specialitem3']; ?>
         </div>
@@ -79,27 +79,27 @@
 <?php if (!empty($content['video1'])): ?>
 
   <div class="wrapper wrapper--video">
-    <section class="royce-container royce-homepage__section">
+    <section class="l-container royce-homepage__section">
 
-      <div class="royce-homepage__video1">
+      <div class="l-grid4-1">
         <div class="royce-homepage-inner">
           <?php print $content['video1']; ?>
         </div>
       </div>
 
-      <div class="royce-homepage__video2">
+      <div class="l-grid4-2">
         <div class="royce-homepage-inner">
           <?php print $content['video2']; ?>
         </div>
       </div>
 
-      <div class="royce-homepage__video3">
+      <div class="l-grid4-3">
         <div class="royce-homepage-inner">
           <?php print $content['video3']; ?>
         </div>
       </div>
 
-      <div class="royce-homepage__video4">
+      <div class="l-grid4-4">
         <div class="royce-homepage-inner">
           <?php print $content['video4']; ?>
         </div>

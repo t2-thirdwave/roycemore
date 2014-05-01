@@ -3,68 +3,11 @@ p:last-child {
 }
 
 .wrapper--update, .wrapper--special {
-  @extend %clearfix-legacy;
+  @extend %clearfix;
 }
 
 .royce-homepage__section {
   padding: 48px 0;
-}
-
-.vertical-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  background-color: $black;
-  background-color: rgba($black, 0.75);
-  color: white;
-  padding: 0 24px;
-  display: none;
-
-  @include breakpoint($lapish) {
-    bottom: 0;
-    width: 40%;
-    padding: 24px;
-  }
-
-  @include breakpoint($deskwideish) {
-    display: block;
-    padding: 48px;
-    width: 30%;
-  }
-
-  @include breakpoint($deskwide) {
-    padding: 48px;
-  }
-
-
-
-  img {
-
-    margin-bottom: 0;
-    padding: 12px;
-    width: 60%;
-
-    @include breakpoint($lapish) {
-      padding: 0;
-      margin-bottom: 12px;
-      width: 100%;
-
-    }
-
-    @include breakpoint($deskwideish) {
-      margin-bottom: 24px;
-
-    }
-
-    @include breakpoint($deskwide) {
-      margin-bottom: 36px;
-    }
-
-
-  }
-
 }
 
 .dl-menu, .dl-submenu {
@@ -87,17 +30,11 @@ p:last-child {
 
 
 .royce-homepage {
-  background: #FFF5EE;
-  background: #FFFAFA;
-  background: #FFF;
-  background: #F0F8FF;
-  background: #C0C0C0;
   background: #ADD8E6;
   background: url(http://subtlepatterns.com/patterns/cloth_alike.png);
 }
 
 ul.slides {
-//  max-height: 460px;
   overflow: hidden;
 }
 
@@ -149,58 +86,6 @@ ul.slides {
 
 }
 
-.royce-homepage__update1 {
-
-  @include breakpoint($phonelandscapeish) {
-    @include grid-span(6, 1, 12);
-  }
-  @include breakpoint($deskish) {
-    @include grid-span(3, 1);
-  }
-
-}
-
-.royce-homepage__update2 {
-
-  @include breakpoint($phonelandscapeish) {
-    @include grid-span(6, 7, 12);
-  }
-
-  @include breakpoint($deskish) {
-    @include grid-span(3, 4);
-  }
-
-}
-
-.royce-homepage__update3 {
-
-  @include breakpoint($phonelandscapeish) {
-    @include grid-span(6, 1, 12);
-    clear: both;
-  }
-
-  @include breakpoint($deskish) {
-    @include grid-span(3, 7);
-  }
-
-}
-
-.royce-homepage__update4 {
-
-  @include breakpoint($phonelandscapeish) {
-    @include grid-span(6, 7, 12);
-  }
-
-  @include breakpoint($deskish) {
-    @include grid-span(3, 10);
-  }
-
-  .royce-homepage-inner {
-    padding-bottom: 0;
-  }
-
-}
-
 .wrapper--special {
 
   h2.pane-title {
@@ -218,130 +103,6 @@ ul.slides {
   }
 
 }
-
-.royce-homepage__special {
-  border-bottom: 1px solid lightgrey;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  padding-bottom: 2rem;
-  margin-bottom: 3rem;
-
-  @include breakpoint($phonelandscapeish) {
-    border-bottom: none;
-  }
-
-  @include breakpoint($lapishplus) {
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-
-}
-
-.royce-homepage__special1 {
-
-  @extend .royce-homepage__special;
-
-  @include breakpoint($phonelandscapeish) {
-    @include grid-span(6, 1, 12, $gutter: 8);
-  }
-
-  @include breakpoint($lapishplus) {
-    @include grid-span(4, 1, $gutter: 4);
-  }
-
-}
-
-.royce-homepage__special2 {
-
-  @extend .royce-homepage__special;
-
-  @include breakpoint($phonelandscapeish) {
-    @include grid-span(6, 7, 12, $gutter: 8);
-  }
-
-  @include breakpoint($lapishplus) {
-    @include grid-span(4, 5, $gutter: 4);
-  }
-
-}
-
-.royce-homepage__special3 {
-
-  @include breakpoint($phonelandscapeish) {
-    @include grid-span(12, 1, 12);
-    clear: both;
-  }
-
-  @include breakpoint($lapishplus) {
-    @include grid-span(4, 9, $gutter: 4);
-  }
-
-}
-
-
-
-
-.royce-homepage__video1 {
-
-  @include breakpoint($lapish) {
-    @include grid-span(6, 1);
-  }
-  @include breakpoint($deskish) {
-    @include grid-span(3, 1);
-  }
-
-}
-
-.royce-homepage__video2 {
-
-  @include breakpoint($lapish) {
-    @include grid-span(6, 7);
-  }
-
-  @include breakpoint($deskish) {
-    @include grid-span(3, 4);
-  }
-
-}
-
-.royce-homepage__video3 {
-
-  @include breakpoint($lapish) {
-    @include grid-span(6, 1);
-    clear: both;
-  }
-
-  @include breakpoint($deskish) {
-    @include grid-span(3, 7);
-  }
-
-}
-
-.royce-homepage__video4 {
-
-  @include breakpoint($lapish) {
-    @include grid-span(6, 7);
-  }
-
-  @include breakpoint($deskish) {
-    @include grid-span(3, 10);
-  }
-
-}
-
-
-
-.panels-ipe-editing {
-
-  .vertical-menu {
-    display: none;
-  }
-
-}
-
-
-
-
-
 
 
 .pane-roycemore-calendar-panel-pane-1 {
@@ -365,12 +126,3 @@ ul.slides {
   }
 
 }
-
-
-
-
-
-
-
-
-

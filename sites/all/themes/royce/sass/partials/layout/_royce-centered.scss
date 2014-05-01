@@ -1,0 +1,17 @@
+.l-content__centered {
+  .l-container {
+
+    @include breakpoint($deskish) {
+      max-width: 50rem;
+    }
+
+    @include breakpoint($deskwideish) {
+      max-width: 62em;
+    }
+
+    @include breakpoint($deskwide) {
+      max-width: 64em;
+    }
+
+  }
+}
