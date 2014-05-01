@@ -1,12 +1,45 @@
+.l-container-inside {
+  margin: 0 auto;
+}
+
 .royce-blog {
+
+  background: #CDEBFE;
+  background: rgba(205, 235, 254, 0.8);
+
+  .l-content__image {
+
+    .l-container {
+      background: #FFF;
+      max-width: 56rem;
+    }
+
+    .panel-pane {
+      margin-bottom: 0;
+    }
+
+  }
   .l-content__header {
 
     .l-container {
-      max-width: 90%;
+      background: #FFF;
+      max-width: 100%;
 
       @include breakpoint($lapish) {
-        max-width: 40rem;
+        max-width: 56rem;
       }
+
+      .l-container-inside {
+        max-width: 90%;
+
+        @include breakpoint($lapish) {
+          max-width: 46rem;
+        }
+        @include breakpoint($deskish) {
+          max-width: 50rem;
+        }
+      }
+
     }
 
     .panel-pane {
@@ -17,20 +50,22 @@
       // @include grid-span(12, 1, 12);
     }
   }
-  .l-content__image {
-
-    .l-container {
-      max-width: 56rem;
-    }
-
-  }
   .l-content__body {
 
     .l-container {
-      max-width: 90%;
+      background: #FFF;
+      max-width: 100%;
 
       @include breakpoint($lapish) {
-        max-width: 40rem;
+        max-width: 56rem;
+      }
+
+      .l-container-inside {
+        max-width: 90%;
+
+        @include breakpoint($lapish) {
+          max-width: 40rem;
+        }
       }
 
     }

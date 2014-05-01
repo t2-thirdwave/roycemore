@@ -25,21 +25,23 @@
 
     <div class="l-content__header">
       <div class="l-container">
-        <?php print $content['content-title']; ?>
-
-        <?php if (!empty($content['content-info'])): ?>
-        <div class="royce-content__info">
-          <?php print $content['content-info']; ?>
+        <div class="l-container-inside">
+          <?php print $content['content-title']; ?>
+          <?php if (!empty($content['content-info'])): ?>
+          <div class="royce-content__info">
+            <?php print $content['content-info']; ?>
+          </div>
+          <?php endif; ?>
         </div>
-        <?php endif; ?>
-
       </div>
     </div>
 
     <?php if (!empty($content['content-body'])): ?>
     <div class="l-content__body">
       <div class="l-container">
-        <?php print $content['content-body']; ?>
+        <div class="l-container-inside">
+          <?php print $content['content-body']; ?>
+        </div>
       </div>
     </div>
     <?php endif; ?>
