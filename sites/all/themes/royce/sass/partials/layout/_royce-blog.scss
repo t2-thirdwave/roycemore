@@ -1,7 +1,7 @@
 .royce-blog {
-  .royce-content__header {
+  .l-content__header {
 
-    .royce-container {
+    .l-container {
       max-width: 90%;
 
       @include breakpoint($lapish) {
@@ -17,16 +17,16 @@
       // @include grid-span(12, 1, 12);
     }
   }
-  .royce-content__image {
+  .l-content__image {
 
-    .royce-container {
+    .l-container {
       max-width: 56rem;
     }
 
   }
-  .royce-content__body {
+  .l-content__body {
 
-    .royce-container {
+    .l-container {
       max-width: 90%;
 
       @include breakpoint($lapish) {

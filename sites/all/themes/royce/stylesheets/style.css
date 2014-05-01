@@ -960,40 +960,40 @@ li > ol {
 }
 
 /* line 4, ../sass/partials/layout/_royce-blog.scss */
-.royce-blog .royce-content__header .royce-container {
+.royce-blog .l-content__header .l-container {
   max-width: 90%;
 }
 @media (min-width: 48em) {
   /* line 4, ../sass/partials/layout/_royce-blog.scss */
-  .royce-blog .royce-content__header .royce-container {
+  .royce-blog .l-content__header .l-container {
     max-width: 40rem;
   }
 }
 /* line 12, ../sass/partials/layout/_royce-blog.scss */
-.royce-blog .royce-content__header .panel-pane {
+.royce-blog .l-content__header .panel-pane {
   margin-bottom: 0;
 }
 /* line 22, ../sass/partials/layout/_royce-blog.scss */
-.royce-blog .royce-content__image .royce-container {
+.royce-blog .l-content__image .l-container {
   max-width: 56rem;
 }
 /* line 29, ../sass/partials/layout/_royce-blog.scss */
-.royce-blog .royce-content__body .royce-container {
+.royce-blog .l-content__body .l-container {
   max-width: 90%;
 }
 @media (min-width: 48em) {
   /* line 29, ../sass/partials/layout/_royce-blog.scss */
-  .royce-blog .royce-content__body .royce-container {
+  .royce-blog .l-content__body .l-container {
     max-width: 40rem;
   }
 }
 /* line 38, ../sass/partials/layout/_royce-blog.scss */
-.royce-blog .royce-content__body .field-body {
+.royce-blog .l-content__body .field-body {
   font-size: 16px;
 }
 @media (min-width: 48em) {
   /* line 38, ../sass/partials/layout/_royce-blog.scss */
-  .royce-blog .royce-content__body .field-body {
+  .royce-blog .l-content__body .field-body {
     font-size: 18px;
   }
 }

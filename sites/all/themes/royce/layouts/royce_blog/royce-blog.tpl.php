@@ -15,16 +15,16 @@
   <section class="royce-content__section">
 
     <?php if (!empty($content['content-image'])): ?>
-    <div class="royce-content__image">
-      <div class="royce-container">
+    <div class="l-content__image">
+      <div class="l-container">
         <?php print $content['content-image']; ?>
       </div>
     </div>
     <?php endif; ?>
 
 
-    <div class="royce-content__header">
-      <div class="royce-container">
+    <div class="l-content__header">
+      <div class="l-container">
         <?php print $content['content-title']; ?>
 
         <?php if (!empty($content['content-info'])): ?>
@@ -37,8 +37,8 @@
     </div>
 
     <?php if (!empty($content['content-body'])): ?>
-    <div class="royce-content__body">
-      <div class="royce-container">
+    <div class="l-content__body">
+      <div class="l-container">
         <?php print $content['content-body']; ?>
       </div>
     </div>
