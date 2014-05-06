@@ -1129,7 +1129,7 @@ p:last-child {
 
 /* line 9, ../sass/partials/layout/_royce-homepage.scss */
 .royce-homepage__section {
-  padding: 48px 0;
+  padding: 24px 0;
 }
 
 /* line 17, ../sass/partials/layout/_royce-homepage.scss */
@@ -2776,4 +2776,9 @@ div.view-tweets ul {
 /* line 56, ../sass/partials/design/_design.scss */
 .item-list ul li {
   margin: 0;
+}
+
+/* line 60, ../sass/partials/design/_design.scss */
+.pane-fpid-177.pane--padded {
+  padding: 1rem;
 }
