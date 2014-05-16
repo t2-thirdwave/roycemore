@@ -1807,50 +1807,49 @@ img.adaptive-image {
 .pane--green {
   background-color: #77c337;
   color: white;
-  color: rgba(255, 255, 255, 0.75);
 }
-/* line 45, ../sass/partials/modules/_royce-panes.scss */
+/* line 44, ../sass/partials/modules/_royce-panes.scss */
 .pane--green h2 {
   color: white;
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* line 54, ../sass/partials/modules/_royce-panes.scss */
+/* line 53, ../sass/partials/modules/_royce-panes.scss */
 .pane--lightgrey {
   background-color: #efefef;
 }
 
-/* line 60, ../sass/partials/modules/_royce-panes.scss */
+/* line 59, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu {
   padding: 24px;
   background: #fafafa;
 }
-/* line 63, ../sass/partials/modules/_royce-panes.scss */
+/* line 62, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu h2 {
   margin-bottom: 1rem;
 }
-/* line 67, ../sass/partials/modules/_royce-panes.scss */
+/* line 66, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu ul.menu {
   margin: 0;
   padding: 0;
 }
-/* line 71, ../sass/partials/modules/_royce-panes.scss */
+/* line 70, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu ul.menu li {
   margin: 0;
   list-style: none;
 }
-/* line 75, ../sass/partials/modules/_royce-panes.scss */
+/* line 74, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu ul.menu li a {
   display: block;
   font-size: 18px;
   line-height: 24px;
   padding: 2px 12px 2px 0;
 }
-/* line 82, ../sass/partials/modules/_royce-panes.scss */
+/* line 81, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu ul.menu li a.active {
   color: black;
 }
-/* line 92, ../sass/partials/modules/_royce-panes.scss */
+/* line 91, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu li.expanded,
 .pane--menu li.collapsed,
 .pane--menu li.leaf {
