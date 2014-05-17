@@ -1,7 +1,7 @@
 <?php
 
 $plugin = array(
-  'title' => t('Roycemore Centered'),
+  'title' => t('Centered'),
   'icon' => 'royce-centered.png',
   'category' => t('Royce'),
   'theme' => 'royce-centered',

@@ -1,7 +1,7 @@
 <?php
 
 $plugin = array(
-  'title' => t('Roycemore Homepage'),
+  'title' => t('Homepage'),
   'icon' => 'royce-homepage.png',
   'category' => t('Royce'),
   'theme' => 'royce-homepage',

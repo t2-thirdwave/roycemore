@@ -1,7 +1,7 @@
 <?php
 
 $plugin = array(
-  'title' => t('Roycemore top + 3 grid + bottom'),
+  'title' => t('Top Content + 3 grid + Bottom Content'),
   'icon' => 'royce-top-3grid-bottom.png',
   'category' => t('Royce'),
   'theme' => 'royce-top-3grid-bottom',

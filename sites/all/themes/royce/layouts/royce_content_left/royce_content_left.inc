@@ -1,7 +1,7 @@
 <?php
 
 $plugin = array(
-  'title' => t('Roycemore Left Content Section + Right Aside'),
+  'title' => t('Left Content + Right Aside'),
   'icon' => 'royce-content-left.png',
   'category' => t('Royce'),
   'theme' => 'royce-content-left',
