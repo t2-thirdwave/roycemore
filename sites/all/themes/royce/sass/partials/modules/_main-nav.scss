@@ -5,16 +5,16 @@
   height: scut-rem(78px);
 
   @include breakpoint($lapish) {
-
+    @include grid-span(1, 4, 4);
   }
 
   @include breakpoint($deskish) {
-    @include grid-span(9, 4);
+    @include grid-span(6, 4);
     display: block;
   }
 
   @include breakpoint($deskwideish) {
-    @include grid-span(8, 5);
+    @include grid-span(6, 4);
   }
 
   .content {
@@ -44,7 +44,7 @@
     height: scut-rem(78px);
     line-height: scut-rem(78px);
     text-align: center;
-    width: 16.666666667%;
+    width: 20%;
 
     &:hover {
       background: $brand-green;

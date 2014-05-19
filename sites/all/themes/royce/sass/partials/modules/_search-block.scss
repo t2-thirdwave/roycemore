@@ -1,0 +1,57 @@
+.block-search-by-page {
+
+  @include grid-span(4, 1, 4);
+
+  @include breakpoint($lapish) {
+    @include grid-span(4, 1, 4, 0);
+  }
+
+  @include breakpoint($deskish) {
+    @include grid-span(3, 10);
+  }
+
+  @include breakpoint($deskwideish) {
+    @include grid-span(3, 10);
+  }
+
+  .search-by-page-form > div {
+    display: table;
+    height: 5rem;
+
+    .container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+  }
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+  h2, label {
+    display: none;
+  }
+
+  .form-item {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    width: 63%;
+  }
+
+  .form-text {
+    padding: .25em .6em;
+    border: 1px solid #000;
+    box-shadow: inset 0 1px 3px #000;
+  }
+
+  .form-submit {
+    padding: 6px;
+    margin-left: 3%;
+    width: 30%;
+  }
+
+
+}
