@@ -1,17 +1,18 @@
 .block-search-by-page {
 
-  @include grid-span(4, 1, 4);
-
-  @include breakpoint($lapish) {
-    @include grid-span(4, 1, 4, 0);
-  }
+  display: none;
 
   @include breakpoint($deskish) {
-    @include grid-span(3, 10);
+    display: block;
+    @include grid-span(3, 10, 12, 0);
   }
 
   @include breakpoint($deskwideish) {
-    @include grid-span(3, 10);
+    @include grid-span(3, 10, 12, 0);
+  }
+
+  .container {
+    padding-left: 12px;
   }
 
   .search-by-page-form > div {
@@ -55,3 +56,27 @@
 
 
 }
+
+
+.page-search-roycemore {
+
+  .wrapper--main {
+    margin: 0 auto;
+    max-width: 90%;
+    @include breakpoint($deskish) {
+      max-width: 52rem;
+    }
+  }
+
+  h2 {
+    margin: 24px 0 0;
+  }
+  .search_by_page-results {
+    margin: 24px 0 48px;
+    padding: 0;
+  }
+}
+
+
+
+
