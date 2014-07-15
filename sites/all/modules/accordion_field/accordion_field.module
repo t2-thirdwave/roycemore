@@ -1,0 +1,136 @@
+<?php
+
+/**
+ * @file
+ * A Accordion Effect Text Area with Hidden Body Text and Trigger.
+ */
+
+
+/**
+ * Implements hook_field_info().
+ */
+function accordion_field_field_info() {
+  return array(
+    // We name our field as the associative name of the array.
+    'accordion_field_accordion' => array(
+      'label' => t('Accordion'),
+      'description' => t('Adds Accordion Content To Page.'),
+      'default_widget' => 'accordion_field_text',
+      'default_formatter' => 'accordion_field_simple_text',
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_is_empty().
+ */
+function accordion_field_field_is_empty($item, $field) {
+  return empty($item['trigger']);
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function accordion_field_field_formatter_info() {
+  return array(
+    'accordion_field_group' => array(
+      'label' => t('Add 1 or many accorions to page'),
+      'field types' => array('accordion_field_accordion'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function accordion_field_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  foreach ($items as $delta => $item) {
+    $element[$delta] = array(
+      '#markup' => '<h5 class="accordion-title">' . t('!title', array('!title' => $item['trigger'])) . '</h5><div class="accordion-body">' . t('!body', array('!body' => $item['hidden_text'])) . ' </div>',
+      '#attached' => array(
+        'js' => array(drupal_get_path('module', 'accordion_field') . '/accordion_field.js'),
+        'css' => array(drupal_get_path('module', 'accordion_field') . '/accordion_field.css'),
+      ),
+    );
+  }
+
+  return $element;
+}
+
+
+/**
+ * Implements hook_field_widget_info().
+ */
+function accordion_field_field_widget_info() {
+  return array(
+    'accordion_field_text' => array(
+      'label' => t('Accordion Fields'),
+      'field types' => array('accordion_field_accordion'),
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_field_widget_form().
+ */
+function accordion_field_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+
+  $title_widget = array();
+  $text_widget = array();
+
+  switch ($instance['widget']['type']) {
+    case 'accordion_field_text':
+      $title_widget = array(
+        '#type' => 'textfield',
+        '#title' => t('Accordion Title'),
+        '#size' => 120,
+        '#description' => t('The title text that will show hidden body text on click.'),
+        '#default_value' => isset($items[$delta]['trigger']) ? $items[$delta]['trigger'] : NULL,
+        '#weight' => -10,
+      );
+      $text_widget = array(
+        '#type' => 'text_format',
+        '#default_value' => isset($items[$delta]['hidden_text']) ? $items[$delta]['hidden_text'] : NULL,
+        '#title' => t('Hidden Body Text'),
+        '#description' => t('The hidden text that will be revealed on click.'),
+        '#format' => 'panopoly_wysiwyg_text',
+        '#weight' => 10,
+      );
+      break;
+  }
+
+  $element['trigger'] = $title_widget;
+  $element['hidden_text'] = $text_widget;
+
+  return $element;
+}
+
+
+/**
+ * Implements hook_field_presave().
+ */
+function accordion_field_field_presave($entity_type, $entity, $field, $instance, $langcode, &$items) {
+  if ($field['type'] == 'accordion_field_accordion') {
+    foreach ($items as $delta => $item) {
+      if (isset($item['hidden_text'])) {
+        $value = $item['hidden_text']['value'];
+        $items[$delta]['hidden_text'] = $value;
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_field_widget_error().
+ */
+function accordion_field_field_widget_error($element, $error, $form, &$form_state) {
+  switch ($error['error']) {
+    case 'accordion_field_invalid':
+      form_error($element, $error['message']);
+      break;
+  }
+}

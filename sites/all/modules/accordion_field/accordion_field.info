@@ -1,0 +1,6 @@
+name = Accordion Field
+description = A field that contains a hidden text field and a trigger title to show it.
+package = Fields
+core = 7.x
+
+dependencies[] = jquery_update
