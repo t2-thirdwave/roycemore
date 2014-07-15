@@ -40,6 +40,19 @@ function roycemodule_entity_info_alter(&$entity_info) {
       'access arguments' => array('administer fieldable panels panes'),
     ),
   );
+  $entity_info['fieldable_panels_pane']['bundles']['accordion'] = array(
+    'label' => t('Accordion'),
+    'pane category' => t('Global'),
+    'pane top level' => TRUE, // set to true to make this show as a top level icon
+    'pane icon' => 'profiles/panopoly/modules/panopoly/panopoly_widgets/images/icon_file.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/accordion',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
 
 }
 
