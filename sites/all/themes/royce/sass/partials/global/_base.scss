@@ -41,8 +41,8 @@ html {}
 
 body {
   @include content-fade-in;
+  @include css-hyphens(none);
   background: #FFF;
-//  color : $textcolor;
   margin: 0;
 }
 
