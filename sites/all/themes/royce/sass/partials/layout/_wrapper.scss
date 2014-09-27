@@ -32,6 +32,18 @@
   }
 }
 
+
+.node-type-blog, .page-blog {
+  .wrapper--main {
+    padding-top: 0;
+    padding-bottom: 0;
+    @include breakpoint($deskish) {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+}
+
 // ----- Homepage Updates - 4 columns ----- //
 .wrapper--update {
   background: #CDEBFE;
@@ -83,6 +95,28 @@
   }
 
 }
+
+.page-blog {
+  .l-container {
+    max-width: 100%;
+    @include breakpoint($between-landscapeish-lapish) {
+      max-width: 90%;
+    }
+    @include breakpoint($lapish) {
+      max-width: 90%;
+    }
+    @include breakpoint($deskish) {
+      max-width: 60rem;
+    }
+    @include breakpoint($deskwideish) {
+      max-width: 72em;
+    }
+    @include breakpoint($deskwide) {
+      max-width: 74em;
+    }
+  }
+}
+
 
 .whelan-container {
   // @extend .l-container;
