@@ -60,3 +60,36 @@
 .pane-fpid-177.pane--padded {
   padding: 1rem;
 }
+
+
+.view-display-id-panel_pane_2 {
+
+  .view-header {
+    h2 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+  }
+
+}
+
+.blog-hp-post {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .blog-hp-post__title {
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  .blog-hp-post__author {
+    color: #AAA;
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+}
+
