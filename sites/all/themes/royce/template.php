@@ -50,53 +50,10 @@ function royce_preprocess_html(&$vars) {
       'content' => 'width=device-width, initial-scale=1.0',
     ),
   );
-  $apple_icon =  array(
-    '#tag' => 'link',
-    '#attributes' => array(
-      'href' => path_to_theme() .'/apple-touch-icon.png',
-      'rel' => 'apple-touch-icon-precomposed',
-    ),
-  );
-  $fav_icon =  array(
-    '#tag' => 'link',
-    '#attributes' => array(
-      'href' => path_to_theme() .'/favicon-16x16.png',
-      'type' => 'image/png',
-      'rel' => 'icon',
-      'sizes' => '16x16',
-    ),
-  );
   drupal_add_html_head($viewport, 'viewport');
   if ($panel_page = panels_get_current_page_display()) {
     // Set body class for the name of the panel page layout.
     $variables['classes_array'][] = 'panel-layout-' . str_replace('_', '-', $panel_page->layout);
-  }
-  drupal_add_html_head($apple_icon, 'apple-touch-icon');
-  $apple_icon_sizes = array(57,60,72,76,114,120,144,152);
-  foreach($apple_icon_sizes as $size){
-    $apple = array(
-      '#tag' => 'link',
-      '#attributes' => array(
-        'href' => path_to_theme().'/apple-touch-icon-'.$size.'x'.$size.'.png',
-        'rel' => 'apple-touch-icon-precomposed',
-        'sizes' => $size . 'x' . $size,
-      ),
-    );
-    drupal_add_html_head($apple, 'apple-touch-icon-'.$size);
-  }
-  drupal_add_html_head($fav_icon, 'favicon');
-  $fav_icon_sizes = array(16,32,96,160,192);
-  foreach($fav_icon_sizes as $favsize){
-    $favicon = array(
-      '#tag' => 'link',
-      '#attributes' => array(
-        'rel' => 'icon',
-        'type' => 'image/png',
-        'href' => path_to_theme().'/favicon-'.$favsize.'x'.$favsize.'.png',
-        'sizes' => $favsize . 'x' . $favsize,
-      ),
-    );
-    drupal_add_html_head($favicon, 'favicon-'.$favsize);
   }
 }
 
