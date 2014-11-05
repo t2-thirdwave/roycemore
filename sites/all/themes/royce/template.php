@@ -57,6 +57,15 @@ function royce_preprocess_html(&$vars) {
       'rel' => 'apple-touch-icon-precomposed',
     ),
   );
+  $fav_icon =  array(
+    '#tag' => 'link',
+    '#attributes' => array(
+      'href' => path_to_theme() .'/favicon-16x16.png',
+      'type' => 'image/png',
+      'rel' => 'icon',
+      'sizes' => '16x16',
+    ),
+  );
   drupal_add_html_head($viewport, 'viewport');
   if ($panel_page = panels_get_current_page_display()) {
     // Set body class for the name of the panel page layout.
@@ -74,6 +83,20 @@ function royce_preprocess_html(&$vars) {
       ),
     );
     drupal_add_html_head($apple, 'apple-touch-icon-'.$size);
+  }
+  drupal_add_html_head($fav_icon, 'favicon');
+  $fav_icon_sizes = array(16,32,96,160,192);
+  foreach($fav_icon_sizes as $favsize){
+    $favicon = array(
+      '#tag' => 'link',
+      '#attributes' => array(
+        'rel' => 'icon',
+        'type' => 'image/png',
+        'href' => path_to_theme().'/favicon-'.$favsize.'x'.$favsize.'.png',
+        'sizes' => $favsize . 'x' . $favsize,
+      ),
+    );
+    drupal_add_html_head($favicon, 'favicon-'.$favsize);
   }
 }
 
