@@ -42,11 +42,41 @@ function royce_modernizr_load_alter(&$load) {
  */
 
 function royce_preprocess_html(&$vars) {
- if ($panel_page = panels_get_current_page_display()) {
-  // Set body class for the name of the panel page layout.
-  $variables['classes_array'][] = 'panel-layout-' . str_replace('_', '-', $panel_page->layout);
- }
+  // Viewport!
+  $viewport = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1.0',
+    ),
+  );
+  $apple_icon =  array(
+    '#tag' => 'link',
+    '#attributes' => array(
+      'href' => path_to_theme() .'/apple-touch-icon.png',
+      'rel' => 'apple-touch-icon-precomposed',
+    ),
+  );
+  drupal_add_html_head($viewport, 'viewport');
+  if ($panel_page = panels_get_current_page_display()) {
+    // Set body class for the name of the panel page layout.
+    $variables['classes_array'][] = 'panel-layout-' . str_replace('_', '-', $panel_page->layout);
+  }
+  drupal_add_html_head($apple_icon, 'apple-touch-icon');
+  $apple_icon_sizes = array(57,60,72,76,114,120,144,152);
+  foreach($apple_icon_sizes as $size){
+    $apple = array(
+      '#tag' => 'link',
+      '#attributes' => array(
+        'href' => path_to_theme().'/apple-touch-icon-'.$size.'x'.$size.'.png',
+        'rel' => 'apple-touch-icon-precomposed',
+        'sizes' => $size . 'x' . $size,
+      ),
+    );
+    drupal_add_html_head($apple, 'apple-touch-icon-'.$size);
+  }
 }
+
 
 /**
  * Override or insert variables into the page template.
