@@ -3068,3 +3068,8 @@ div.view-tweets ul {
   font-size: 13px;
   line-height: 15px;
 }
+
+/* line 102, ../sass/partials/design/_design.scss */
+.pane-archive-panel-pane-2 ul {
+  list-style: none;
+}
