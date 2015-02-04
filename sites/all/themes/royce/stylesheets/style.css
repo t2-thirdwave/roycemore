@@ -2675,7 +2675,7 @@ div.view-tweets ul {
 }
 
 /* line 1, ../sass/partials/modules/_social-sharing.scss */
-.royce-facebook, .royce-twitter {
+.royce-facebook, .royce-instagram, .royce-twitter {
   background-image: url(/sites/all/themes/royce/images/Facebook.svg);
   text-indent: -9999em;
   display: inline-block;
@@ -2686,7 +2686,7 @@ div.view-tweets ul {
   margin: 0 12px;
 }
 /* line 11, ../sass/partials/modules/_social-sharing.scss */
-.royce-facebook a, .royce-twitter a {
+.royce-facebook a, .royce-instagram a, .royce-twitter a {
   display: block;
 }
 
@@ -2699,11 +2699,19 @@ div.view-tweets ul {
 }
 
 /* line 24, ../sass/partials/modules/_social-sharing.scss */
+.royce-instagram {
+  background-image: url(/sites/all/themes/royce/images/Instagram.svg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  margin-right: 0;
+}
+
+/* line 31, ../sass/partials/modules/_social-sharing.scss */
 .footer-social {
   text-align: center;
   margin-top: 48px;
 }
-/* line 27, ../sass/partials/modules/_social-sharing.scss */
+/* line 34, ../sass/partials/modules/_social-sharing.scss */
 .footer-social h2 {
   -webkit-hyphens: none;
   -moz-hyphens: none;
@@ -2712,23 +2720,23 @@ div.view-tweets ul {
   font-size: 21px;
 }
 @media (min-width: 48em) {
-  /* line 24, ../sass/partials/modules/_social-sharing.scss */
+  /* line 31, ../sass/partials/modules/_social-sharing.scss */
   .footer-social {
     margin-top: 0;
   }
-  /* line 37, ../sass/partials/modules/_social-sharing.scss */
+  /* line 44, ../sass/partials/modules/_social-sharing.scss */
   .footer-social h2 {
     font-size: 30px;
   }
 }
-/* line 42, ../sass/partials/modules/_social-sharing.scss */
-.footer-social .royce-facebook, .footer-social .royce-twitter {
+/* line 49, ../sass/partials/modules/_social-sharing.scss */
+.footer-social .royce-facebook, .footer-social .royce-instagram, .footer-social .royce-twitter {
   height: 48px;
   width: 48px;
   background-size: 48px;
 }
-/* line 47, ../sass/partials/modules/_social-sharing.scss */
-.footer-social .royce-facebook a, .footer-social .royce-twitter a {
+/* line 54, ../sass/partials/modules/_social-sharing.scss */
+.footer-social .royce-facebook a, .footer-social .royce-instagram a, .footer-social .royce-twitter a {
   line-height: 48px;
 }
 
