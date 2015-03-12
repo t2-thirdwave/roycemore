@@ -894,120 +894,125 @@ li > ol {
   background: #CDEBFE;
   background: rgba(205, 235, 254, 0.8);
 }
+/* line 64, ../sass/partials/layout/_wrapper.scss */
+.wrapper--video h2.pane-title {
+  font-size: 16px;
+  min-height: 36px;
+}
 
-/* line 66, ../sass/partials/layout/_wrapper.scss */
+/* line 72, ../sass/partials/layout/_wrapper.scss */
 .wrapper--footer {
   background-color: #0077c5;
   color: white;
 }
-/* line 69, ../sass/partials/layout/_wrapper.scss */
+/* line 75, ../sass/partials/layout/_wrapper.scss */
 .wrapper--footer .l-container {
   padding: 36px 0;
 }
 
-/* line 75, ../sass/partials/layout/_wrapper.scss */
+/* line 81, ../sass/partials/layout/_wrapper.scss */
 .l-container {
   position: relative;
   max-width: 80%;
   margin: 0 auto;
 }
 @media (min-width: 29.9375em) {
-  /* line 75, ../sass/partials/layout/_wrapper.scss */
+  /* line 81, ../sass/partials/layout/_wrapper.scss */
   .l-container {
     max-width: 90%;
   }
 }
 @media (min-width: 64em) {
-  /* line 75, ../sass/partials/layout/_wrapper.scss */
+  /* line 81, ../sass/partials/layout/_wrapper.scss */
   .l-container {
     max-width: 60rem;
   }
 }
 @media (min-width: 75em) {
-  /* line 75, ../sass/partials/layout/_wrapper.scss */
+  /* line 81, ../sass/partials/layout/_wrapper.scss */
   .l-container {
     max-width: 72em;
   }
 }
 @media (min-width: 87.5em) {
-  /* line 75, ../sass/partials/layout/_wrapper.scss */
+  /* line 81, ../sass/partials/layout/_wrapper.scss */
   .l-container {
     max-width: 74em;
   }
 }
 
-/* line 100, ../sass/partials/layout/_wrapper.scss */
+/* line 106, ../sass/partials/layout/_wrapper.scss */
 .page-blog .l-container {
   max-width: 100%;
 }
 @media (min-width: 29.9375em) and (max-width: 47.9375em) {
-  /* line 100, ../sass/partials/layout/_wrapper.scss */
+  /* line 106, ../sass/partials/layout/_wrapper.scss */
   .page-blog .l-container {
     max-width: 90%;
   }
 }
 @media (min-width: 48em) {
-  /* line 100, ../sass/partials/layout/_wrapper.scss */
+  /* line 106, ../sass/partials/layout/_wrapper.scss */
   .page-blog .l-container {
     max-width: 90%;
   }
 }
 @media (min-width: 64em) {
-  /* line 100, ../sass/partials/layout/_wrapper.scss */
+  /* line 106, ../sass/partials/layout/_wrapper.scss */
   .page-blog .l-container {
     max-width: 60rem;
   }
 }
 @media (min-width: 75em) {
-  /* line 100, ../sass/partials/layout/_wrapper.scss */
+  /* line 106, ../sass/partials/layout/_wrapper.scss */
   .page-blog .l-container {
     max-width: 72em;
   }
 }
 @media (min-width: 87.5em) {
-  /* line 100, ../sass/partials/layout/_wrapper.scss */
+  /* line 106, ../sass/partials/layout/_wrapper.scss */
   .page-blog .l-container {
     max-width: 74em;
   }
 }
 
-/* line 126, ../sass/partials/layout/_wrapper.scss */
+/* line 132, ../sass/partials/layout/_wrapper.scss */
 .pane-bundle-slideshow .l-container, .view-mode-program_spotlight .l-container {
   width: 100%;
   max-width: 100%;
 }
 @media (min-width: 48em) {
-  /* line 126, ../sass/partials/layout/_wrapper.scss */
+  /* line 132, ../sass/partials/layout/_wrapper.scss */
   .pane-bundle-slideshow .l-container, .view-mode-program_spotlight .l-container {
     max-width: 90%;
   }
 }
 @media (min-width: 64em) {
-  /* line 126, ../sass/partials/layout/_wrapper.scss */
+  /* line 132, ../sass/partials/layout/_wrapper.scss */
   .pane-bundle-slideshow .l-container, .view-mode-program_spotlight .l-container {
     max-width: 60rem;
   }
 }
 @media (min-width: 75em) {
-  /* line 126, ../sass/partials/layout/_wrapper.scss */
+  /* line 132, ../sass/partials/layout/_wrapper.scss */
   .pane-bundle-slideshow .l-container, .view-mode-program_spotlight .l-container {
     max-width: 72em;
   }
 }
 @media (min-width: 87.5em) {
-  /* line 126, ../sass/partials/layout/_wrapper.scss */
+  /* line 132, ../sass/partials/layout/_wrapper.scss */
   .pane-bundle-slideshow .l-container, .view-mode-program_spotlight .l-container {
     max-width: 74em;
   }
 }
 
-/* line 149, ../sass/partials/layout/_wrapper.scss */
+/* line 155, ../sass/partials/layout/_wrapper.scss */
 #header .l-container {
   width: 90%;
   max-width: 90%;
 }
 
-/* line 155, ../sass/partials/layout/_wrapper.scss */
+/* line 161, ../sass/partials/layout/_wrapper.scss */
 .pane-bundle-slideshow ul.slides {
   background: #0077c5;
 }
