@@ -43,7 +43,7 @@
   }
 }
 
-.node-type-blog {
+.node-type-blog, .page-taxonomy-term {
   .wrapper--main {
     padding-top: 0;
     padding-bottom: 0;
@@ -51,6 +51,12 @@
       padding-top: 6rem;
       padding-bottom: 3rem;
     }
+  }
+}
+
+.page-taxonomy-term {
+  .wrapper--main {
+    padding-top: 6rem;
   }
 }
 
