@@ -45,7 +45,7 @@
 
 .node-type-blog {
   .wrapper--main {
-    padding-top: 3rem;
+    padding-top: 0;
     padding-bottom: 0;
     @include breakpoint($deskish) {
       padding-top: 6rem;

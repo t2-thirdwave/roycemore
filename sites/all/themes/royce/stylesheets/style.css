@@ -879,7 +879,7 @@ li > ol {
 
 /* line 47, ../sass/partials/layout/_wrapper.scss */
 .node-type-blog .wrapper--main {
-  padding-top: 3rem;
+  padding-top: 0;
   padding-bottom: 0;
 }
 @media (min-width: 64em) {
