@@ -1,4 +1,4 @@
-.page-blog {
+.page-blog, .page-taxonomy-term {
 
   .wrapper--main {
     background: #CDEBFE;
@@ -233,3 +233,12 @@
 
 }
 
+
+
+
+.pane-blog-categories-panel-pane-1 {
+  .view-content div {
+    display: inline-block;
+    margin-right: 12px;
+  }
+}
