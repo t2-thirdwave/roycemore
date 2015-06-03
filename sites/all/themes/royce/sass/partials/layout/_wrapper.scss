@@ -32,13 +32,23 @@
   }
 }
 
-
-.node-type-blog, .page-blog {
+.page-blog {
   .wrapper--main {
     padding-top: 0;
     padding-bottom: 0;
     @include breakpoint($deskish) {
       padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+}
+
+.node-type-blog {
+  .wrapper--main {
+    padding-top: 3rem;
+    padding-bottom: 0;
+    @include breakpoint($deskish) {
+      padding-top: 6rem;
       padding-bottom: 3rem;
     }
   }

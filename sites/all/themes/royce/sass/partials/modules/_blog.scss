@@ -242,3 +242,19 @@
     margin-right: 12px;
   }
 }
+
+
+.node-type-blog .wrapper--main, .page-blog .wrapper--main
+
+
+.pane-fpid-302 {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+
+  @include breakpoint($deskish) {
+    top: -3.725rem;
+    left: 24px;
+  }
+
+}
