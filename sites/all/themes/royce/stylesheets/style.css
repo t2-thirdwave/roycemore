@@ -3008,16 +3008,14 @@ div.view-tweets ul {
   margin-right: 12px;
 }
 
-/* line 250, ../sass/partials/modules/_blog.scss */
-.node-type-blog .wrapper--main, .page-blog .wrapper--main
+/* line 246, ../sass/partials/modules/_blog.scss */
 .pane-fpid-302 {
   position: absolute;
   top: 24px;
   left: 24px;
 }
 @media (min-width: 64em) {
-  /* line 250, ../sass/partials/modules/_blog.scss */
-  .node-type-blog .wrapper--main, .page-blog .wrapper--main
+  /* line 246, ../sass/partials/modules/_blog.scss */
   .pane-fpid-302 {
     top: -3.725rem;
     left: 24px;
