@@ -2031,6 +2031,10 @@ img.adaptive-image {
 .logo .logo-inside {
   padding-right: 12px;
 }
+/* line 29, ../sass/partials/modules/_logo.scss */
+.logo img {
+  max-height: 54px;
+}
 
 /* line 1, ../sass/partials/modules/_main-nav.scss */
 .block-superfish {
