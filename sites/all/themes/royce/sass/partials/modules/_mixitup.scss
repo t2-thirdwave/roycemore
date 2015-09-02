@@ -2,8 +2,7 @@
 
   .miu_controls, .filters_wrapper {
     padding: 2%;
-    background: #333;
-    color: #eee;
+    color: #aaa;
 
     label {
       font-weight: 300;
@@ -42,7 +41,7 @@
   padding: 2% 2% 0;
   text-align: justify;
   font-size: 0.1px;
-  background: #68b8c4;
+  // background: #68b8c4;
   
   -webkit-backface-visibility: hidden;
 }
@@ -57,13 +56,12 @@
 .miu_container .gap {
   display: inline-block;
   font-size: 16px;
-  padding: 24px;
   width: 49%;
 }
 
 .miu_container .mix {
   text-align: left;
-  background: #03899c;
+  background: #efefef;
   margin-bottom: 2%;
   // display: none;
   font-size: 16px;
@@ -117,12 +115,16 @@
 }
 
 
+.mix_item--inside {
+  padding: 24px;
+}
+
 .mixitup_views_filter {
   /* Checkbox Hack */
   input[type=checkbox] {
-     position: absolute;
-     top: -9999px;
-     left: -9999px;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
   }
   label { 
     display: inline-block;
@@ -136,5 +138,13 @@
     font-size: 16px;
     font-weight: 300;
     border-radius: 4px;
-  }  
+  }
+  input[type=checkbox]:checked + label {
+    background: #77c337;
+  }
+
 }
+
+.form-checkboxes.mixitup_views_filter .form-item, .form-radios .form-item {
+  display: inline-block;
+} 

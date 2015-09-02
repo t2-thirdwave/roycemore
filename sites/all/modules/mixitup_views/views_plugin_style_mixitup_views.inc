@@ -1,9 +1,9 @@
 <?php
+
 /**
  * @file
  * Contains the Mixitup style plugin.
  */
-
 class views_plugin_style_mixitup_views extends views_plugin_style {
 
   /**
@@ -30,7 +30,6 @@ class views_plugin_style_mixitup_views extends views_plugin_style {
    */
   function options_form(&$form, &$form_state) {
     parent::options_form($form, $form_state);
-
     // Add Mixitup options to views form.
     $form['mixitup'] = array(
       '#type' => 'fieldset',
@@ -102,13 +101,90 @@ class views_plugin_style_mixitup_views extends views_plugin_style {
           );
         }
       }
+      $view = $form_state['view'];
+      $sorts = $view->get_items('sort');
+
+      $form['mixitup_sorting_settings'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('MixItUp Sorting settings'),
+      );
+      $form['use_sort'] = array(
+        '#type' => 'checkbox',
+        '#fieldset' => 'mixitup_sorting_settings',
+        '#title' => t('Use sorting.'),
+        '#description' => t('If you want to add new Sort criteria, add them under views "Sort criteria", at first.'),
+        '#default_value' => $options['use_sort'],
+        '#attributes' => array(
+          'class' => array('use_sort'),
+        ),
+      );
+      if ($sorts) {
+        $form['sorts'] = array(
+          '#type' => 'div',
+          '#fieldset' => 'mixitup_sorting_settings',
+        );
+        foreach ($sorts as $id => $sort) {
+          $sort_id = $sort['table'] . '_' . $sort['field'];
+          $form['sorts'][$sort_id] = array(
+            '#type' => 'textfield',
+            '#title' => t('Label for "!f"', array('!f' => $id)),
+            '#description' => t("If you don't want to use it, just make this field empty."),
+            '#default_value' => isset($options['sorts'][$sort_id]) ? $options['sorts'][$sort_id] : '',
+            '#states' => array(
+              'visible' => array(
+                '.use_sort' => array('checked' => TRUE),
+              ),
+            ),
+          );
+        }
+      }
+
+      $form['mixitup_vocab'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('MixItUp Vocabulary settings'),
+      );
+      $form['restrict_vocab'] = array(
+        '#type' => 'checkbox',
+        '#fieldset' => 'mixitup_vocab',
+        '#title' => t('Restrict terms to particular vocabulary.'),
+        '#default_value' => $options['restrict_vocab'],
+        '#attributes' => array(
+          'class' => array('restrict_vocab_enable'),
+        ),
+      );
+      $all_vocabs = taxonomy_vocabulary_load_multiple(FALSE);
+      $vocabulary_options = array();
+      foreach ($all_vocabs as $key_vid => $vocab) {
+        $vocabulary_options[$key_vid] = $vocab->name;
+      }
+      $form['restrict_vocab_ids'] = array(
+        '#type' => 'checkboxes',
+        '#fieldset' => 'mixitup_vocab',
+        '#title' => t('Select vocabularies'),
+        '#multiple' => TRUE,
+        '#options' => $vocabulary_options,
+        '#default_value' => $options['restrict_vocab_ids'],
+        '#states' => array(
+          'visible' => array(
+            '.restrict_vocab_enable' => array('checked' => TRUE),
+          ),
+        ),
+      );
     }
     else {
       // Disable Mixitup.
       $form['mixitup_disabled'] = array(
-        '#markup' => t('Please, install MixItUp plugin for using it.'),
+        '#markup' => t('Please, download !mixitup plugin to your
+          libraries directory. For more information read !read. After that, you can use it.', array(
+          '!mixitup' => l('MixItUp', 'https://github.com/patrickkunka/mixitup'),
+          '!read' => l('README', 'admin/help/mixitup_views', array(
+            'absolut' => TRUE,
+            'attributes' => array('target' => '_blank'),
+          )),
+        )),
         '#fieldset' => 'mixitup',
       );
     }
   }
+
 }

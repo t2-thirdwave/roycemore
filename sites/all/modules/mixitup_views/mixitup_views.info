@@ -1,5 +1,5 @@
 name = Mixitup Views
-description = Creates Mixitup filtering style plugin for Views  
+description = Creates Mixitup filtering style plugin for Views
 core = 7.x
 
 files[] = views_plugin_style_mixitup_views.inc
@@ -8,9 +8,9 @@ dependencies[] = views
 dependencies[] = libraries
 dependencies[] = jquery_update
 
-; Information added by Drupal.org packaging script on 2015-03-16
-version = "7.x-1.1"
+; Information added by Drupal.org packaging script on 2015-07-28
+version = "7.x-1.6"
 core = "7.x"
 project = "mixitup_views"
-datestamp = "1426504382"
+datestamp = "1438088370"
 
