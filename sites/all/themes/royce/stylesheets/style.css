@@ -3266,36 +3266,33 @@ div.view-tweets ul {
   text-align: center;
 }
 
-/* line 207, ../sass/partials/modules/_mixitup.scss */
-.form-item-filter-3-.tid-35 label {
+/* line 209, ../sass/partials/modules/_mixitup.scss */
+.mixitup_views_filter .form-item-filter-3-.tid-35 label {
   background-color: #3F9A57;
 }
-
-/* line 213, ../sass/partials/modules/_mixitup.scss */
-.form-item-filter-3-.tid-34 label {
+/* line 215, ../sass/partials/modules/_mixitup.scss */
+.mixitup_views_filter .form-item-filter-3-.tid-34 label {
   background-color: #3F749A;
 }
-
-/* line 219, ../sass/partials/modules/_mixitup.scss */
-.form-item-filter-3-.tid-39 label {
+/* line 221, ../sass/partials/modules/_mixitup.scss */
+.mixitup_views_filter .form-item-filter-3-.tid-39 label {
   background-color: #9A3F97;
 }
-
-/* line 225, ../sass/partials/modules/_mixitup.scss */
-.form-item-filter-3-.tid-37 label {
+/* line 227, ../sass/partials/modules/_mixitup.scss */
+.mixitup_views_filter .form-item-filter-3-.tid-37 label {
   background-color: #E9EC1C;
   color: black;
 }
 
-/* line 231, ../sass/partials/modules/_mixitup.scss */
+/* line 235, ../sass/partials/modules/_mixitup.scss */
 .field-digital-artifact-video {
   position: relative;
 }
-/* line 234, ../sass/partials/modules/_mixitup.scss */
+/* line 238, ../sass/partials/modules/_mixitup.scss */
 .field-digital-artifact-video .colorbox {
   display: block;
 }
-/* line 238, ../sass/partials/modules/_mixitup.scss */
+/* line 242, ../sass/partials/modules/_mixitup.scss */
 .field-digital-artifact-video svg {
   position: absolute;
 }
