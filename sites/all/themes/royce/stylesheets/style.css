@@ -3142,31 +3142,30 @@ div.view-tweets ul {
 /* line 71, ../sass/partials/modules/_mixitup.scss */
 .miu_container .mix {
   text-align: left;
-  background: #efefef;
   margin-bottom: 2%;
   font-size: 16px;
   vertical-align: text-top;
 }
-/* line 79, ../sass/partials/modules/_mixitup.scss */
+/* line 78, ../sass/partials/modules/_mixitup.scss */
 .miu_container .mix a, .miu_container .mix a:visited {
   color: #fff;
 }
-/* line 82, ../sass/partials/modules/_mixitup.scss */
+/* line 81, ../sass/partials/modules/_mixitup.scss */
 .miu_container .mix a:hover {
   color: #fff;
 }
 
-/* line 88, ../sass/partials/modules/_mixitup.scss */
+/* line 87, ../sass/partials/modules/_mixitup.scss */
 .miu_container .mix.category-1 {
   border-top: 2px solid limegreen;
 }
 
-/* line 92, ../sass/partials/modules/_mixitup.scss */
+/* line 91, ../sass/partials/modules/_mixitup.scss */
 .miu_container .mix.category-2 {
   border-top: 2px solid yellow;
 }
 
-/* line 96, ../sass/partials/modules/_mixitup.scss */
+/* line 95, ../sass/partials/modules/_mixitup.scss */
 .miu_container .mix:after {
   content: attr(data-myorder);
   color: white;
@@ -3177,44 +3176,44 @@ div.view-tweets ul {
   font-weight: 700;
 }
 
-/* line 106, ../sass/partials/modules/_mixitup.scss */
+/* line 105, ../sass/partials/modules/_mixitup.scss */
 .miu_container .mix:before {
   content: '';
   display: inline-block;
 }
 
 @media all and (min-width: 420px) {
-  /* line 114, ../sass/partials/modules/_mixitup.scss */
+  /* line 113, ../sass/partials/modules/_mixitup.scss */
   .miu_container .mix,
   .miu_container .gap {
     width: 32%;
   }
 }
 @media all and (min-width: 640px) {
-  /* line 121, ../sass/partials/modules/_mixitup.scss */
+  /* line 120, ../sass/partials/modules/_mixitup.scss */
   .miu_container .mix,
   .miu_container .gap {
     width: 23.5%;
   }
 }
-/* line 127, ../sass/partials/modules/_mixitup.scss */
+/* line 126, ../sass/partials/modules/_mixitup.scss */
 .mix_item--inside {
   padding: 16px;
   vertical-align: top;
   position: relative;
 }
 
-/* line 133, ../sass/partials/modules/_mixitup.scss */
+/* line 132, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter {
   /* Checkbox Hack */
 }
-/* line 135, ../sass/partials/modules/_mixitup.scss */
+/* line 134, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter input[type=checkbox] {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
-/* line 140, ../sass/partials/modules/_mixitup.scss */
+/* line 139, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter label {
   display: inline-block;
   margin: 60px 0 10px 0;
@@ -3227,11 +3226,11 @@ div.view-tweets ul {
   font-weight: 300;
   border-radius: 4px;
 }
-/* line 153, ../sass/partials/modules/_mixitup.scss */
+/* line 152, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter input[type=checkbox]:checked + label {
   background: #77c337;
 }
-/* line 157, ../sass/partials/modules/_mixitup.scss */
+/* line 156, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter #reset {
   position: absolute;
   margin-top: 0.4em;
@@ -3247,54 +3246,67 @@ div.view-tweets ul {
   background: #666666;
 }
 
-/* line 174, ../sass/partials/modules/_mixitup.scss */
+/* line 173, ../sass/partials/modules/_mixitup.scss */
 .form-checkboxes.mixitup_views_filter .form-item, .form-radios .form-item {
   display: inline-block;
 }
 
-/* line 192, ../sass/partials/modules/_mixitup.scss */
+/* line 191, ../sass/partials/modules/_mixitup.scss */
 .wrapper--digital-artifacts {
   background-color: ghostwhite;
 }
-/* line 195, ../sass/partials/modules/_mixitup.scss */
+/* line 194, ../sass/partials/modules/_mixitup.scss */
 .wrapper--digital-artifacts .l-container {
   padding: 72px 0;
 }
-/* line 199, ../sass/partials/modules/_mixitup.scss */
+/* line 198, ../sass/partials/modules/_mixitup.scss */
 .wrapper--digital-artifacts h1, .wrapper--digital-artifacts h2 {
   margin-top: 0;
-  text-align: center;
+  text-align: left;
 }
 
-/* line 209, ../sass/partials/modules/_mixitup.scss */
+/* line 208, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter .form-item-filter-3-.tid-35 label {
   background-color: #3F9A57;
 }
-/* line 215, ../sass/partials/modules/_mixitup.scss */
+/* line 214, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter .form-item-filter-3-.tid-34 label {
   background-color: #3F749A;
 }
-/* line 221, ../sass/partials/modules/_mixitup.scss */
+/* line 220, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter .form-item-filter-3-.tid-39 label {
   background-color: #9A3F97;
 }
-/* line 227, ../sass/partials/modules/_mixitup.scss */
+/* line 226, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter .form-item-filter-3-.tid-37 label {
   background-color: #E9EC1C;
   color: black;
 }
 
-/* line 235, ../sass/partials/modules/_mixitup.scss */
+/* line 234, ../sass/partials/modules/_mixitup.scss */
 .field-digital-artifact-video {
   position: relative;
 }
-/* line 238, ../sass/partials/modules/_mixitup.scss */
+/* line 237, ../sass/partials/modules/_mixitup.scss */
 .field-digital-artifact-video .colorbox {
   display: block;
 }
-/* line 242, ../sass/partials/modules/_mixitup.scss */
+/* line 241, ../sass/partials/modules/_mixitup.scss */
 .field-digital-artifact-video svg {
   position: absolute;
+}
+
+/* line 248, ../sass/partials/modules/_mixitup.scss */
+.field.field-name-field-digital-artifact-schools {
+  background-color: #3F9A57;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 400;
+  position: absolute;
+  top: 149px;
+  right: 16px;
+  color: white;
 }
 
 /* line 53, ../sass/partials/design/_design.scss */
