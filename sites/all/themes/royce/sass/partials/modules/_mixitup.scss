@@ -1,8 +1,10 @@
 .view-mixitup-test {
 
   .miu_controls, .filters_wrapper {
-    padding: 2%;
     color: #aaa;
+    padding: 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 
     label {
       font-weight: 300;
@@ -31,6 +33,13 @@
 
     button + label{
       margin-left: 1em;
+    }
+
+    .form-type-checkboxes {
+      margin: 0;
+      width: 100%;
+      text-align: center;
+      padding: 24px;
     }
 
   }
@@ -116,7 +125,9 @@
 
 
 .mix_item--inside {
-  padding: 24px;
+  padding: 16px;
+  vertical-align: top;
+  position: relative;
 }
 
 .mixitup_views_filter {
@@ -143,8 +154,89 @@
     background: #77c337;
   }
 
+  #reset {
+    position: absolute;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    display: inline;
+    cursor: pointer;
+    padding: 0.4em 0.8em;
+    border: 0px;
+    color: rgb(221, 221, 221);
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 4px;
+    background: rgb(102, 102, 102);
+  }
+
 }
 
 .form-checkboxes.mixitup_views_filter .form-item, .form-radios .form-item {
   display: inline-block;
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper--digital-artifacts {
+  background-color: ghostwhite;
+
+  .l-container {
+    padding: 72px 0;
+  }
+
+  h1, h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+}
+
+.form-item-filter-3-.tid-35 {
+  label {
+    background-color: #3F9A57;
+  }
+}
+
+.form-item-filter-3-.tid-34 {
+  label {
+    background-color: #3F749A;
+  }  
+}
+
+.form-item-filter-3-.tid-39 {
+  label {
+    background-color: #9A3F97;
+  }
+}
+
+.form-item-filter-3-.tid-37 {
+  label {
+    background-color: #E9EC1C;
+    color: black;
+  }
+}
+
+.field-digital-artifact-video {
+  position: relative;
+
+  .colorbox {
+    display: block;
+  }
+
+  svg {
+    position: absolute;
+  }
+
+}
