@@ -3115,123 +3115,8 @@ div.view-tweets ul {
   text-align: center;
   padding: 24px;
 }
-
-/* line 49, ../sass/partials/modules/_mixitup.scss */
-.miu_container {
-  padding: 2% 2% 0;
-  text-align: justify;
-  font-size: 0.1px;
-  -webkit-backface-visibility: hidden;
-}
-
-/* line 58, ../sass/partials/modules/_mixitup.scss */
-.miu_container:after {
-  content: '';
-  display: inline-block;
-  width: 100%;
-}
-
-/* line 65, ../sass/partials/modules/_mixitup.scss */
-.miu_container .mix,
-.miu_container .gap {
-  display: inline-block;
-  font-size: 16px;
-  width: 49%;
-}
-
-/* line 71, ../sass/partials/modules/_mixitup.scss */
-.miu_container .mix {
-  text-align: left;
-  margin-bottom: 2%;
-  font-size: 16px;
-  vertical-align: text-top;
-}
-/* line 78, ../sass/partials/modules/_mixitup.scss */
-.miu_container .mix a, .miu_container .mix a:visited {
-  color: #fff;
-}
-/* line 81, ../sass/partials/modules/_mixitup.scss */
-.miu_container .mix a:hover {
-  color: #fff;
-}
-
-/* line 87, ../sass/partials/modules/_mixitup.scss */
-.miu_container .mix.category-1 {
-  border-top: 2px solid limegreen;
-}
-
-/* line 91, ../sass/partials/modules/_mixitup.scss */
-.miu_container .mix.category-2 {
-  border-top: 2px solid yellow;
-}
-
-/* line 95, ../sass/partials/modules/_mixitup.scss */
-.miu_container .mix:after {
-  content: attr(data-myorder);
-  color: white;
-  font-size: 16px;
-  display: inline-block;
-  vertical-align: top;
-  padding: 4% 6%;
-  font-weight: 700;
-}
-
-/* line 105, ../sass/partials/modules/_mixitup.scss */
-.miu_container .mix:before {
-  content: '';
-  display: inline-block;
-}
-
-@media all and (min-width: 420px) {
-  /* line 113, ../sass/partials/modules/_mixitup.scss */
-  .miu_container .mix,
-  .miu_container .gap {
-    width: 32%;
-  }
-}
-@media all and (min-width: 640px) {
-  /* line 120, ../sass/partials/modules/_mixitup.scss */
-  .miu_container .mix,
-  .miu_container .gap {
-    width: 23.5%;
-  }
-}
-/* line 126, ../sass/partials/modules/_mixitup.scss */
-.mix_item--inside {
-  padding: 16px;
-  vertical-align: top;
-  position: relative;
-}
-
-/* line 132, ../sass/partials/modules/_mixitup.scss */
-.mixitup_views_filter {
-  /* Checkbox Hack */
-}
-/* line 134, ../sass/partials/modules/_mixitup.scss */
-.mixitup_views_filter input[type=checkbox] {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-/* line 139, ../sass/partials/modules/_mixitup.scss */
-.mixitup_views_filter label {
-  display: inline-block;
-  margin: 60px 0 10px 0;
-  cursor: pointer;
-  padding: .4em .8em;
-  background: #666;
-  border: 0;
-  color: #ddd;
-  font-size: 16px;
-  font-weight: 300;
-  border-radius: 4px;
-}
-/* line 152, ../sass/partials/modules/_mixitup.scss */
-.mixitup_views_filter input[type=checkbox]:checked + label {
-  background: #77c337;
-}
-/* line 156, ../sass/partials/modules/_mixitup.scss */
-.mixitup_views_filter #reset {
+/* line 45, ../sass/partials/modules/_mixitup.scss */
+.view-mixitup-test .miu_controls #reset, .view-mixitup-test .filters_wrapper #reset {
   position: absolute;
   margin-top: 0.4em;
   margin-bottom: 0.4em;
@@ -3244,6 +3129,121 @@ div.view-tweets ul {
   font-weight: 300;
   border-radius: 4px;
   background: #666666;
+}
+
+/* line 64, ../sass/partials/modules/_mixitup.scss */
+.miu_container {
+  padding: 2% 2% 0;
+  text-align: justify;
+  font-size: 0.1px;
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 73, ../sass/partials/modules/_mixitup.scss */
+.miu_container:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 80, ../sass/partials/modules/_mixitup.scss */
+.miu_container .mix,
+.miu_container .gap {
+  display: inline-block;
+  font-size: 16px;
+  width: 49%;
+}
+
+/* line 86, ../sass/partials/modules/_mixitup.scss */
+.miu_container .mix {
+  text-align: left;
+  margin-bottom: 2%;
+  font-size: 16px;
+  vertical-align: text-top;
+}
+/* line 93, ../sass/partials/modules/_mixitup.scss */
+.miu_container .mix a, .miu_container .mix a:visited {
+  color: #fff;
+}
+/* line 96, ../sass/partials/modules/_mixitup.scss */
+.miu_container .mix a:hover {
+  color: #fff;
+}
+
+/* line 102, ../sass/partials/modules/_mixitup.scss */
+.miu_container .mix.category-1 {
+  border-top: 2px solid limegreen;
+}
+
+/* line 106, ../sass/partials/modules/_mixitup.scss */
+.miu_container .mix.category-2 {
+  border-top: 2px solid yellow;
+}
+
+/* line 110, ../sass/partials/modules/_mixitup.scss */
+.miu_container .mix:after {
+  content: attr(data-myorder);
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4% 6%;
+  font-weight: 700;
+}
+
+/* line 120, ../sass/partials/modules/_mixitup.scss */
+.miu_container .mix:before {
+  content: '';
+  display: inline-block;
+}
+
+@media all and (min-width: 420px) {
+  /* line 128, ../sass/partials/modules/_mixitup.scss */
+  .miu_container .mix,
+  .miu_container .gap {
+    width: 32%;
+  }
+}
+@media all and (min-width: 640px) {
+  /* line 135, ../sass/partials/modules/_mixitup.scss */
+  .miu_container .mix,
+  .miu_container .gap {
+    width: 23.5%;
+  }
+}
+/* line 141, ../sass/partials/modules/_mixitup.scss */
+.mix_item--inside {
+  padding: 16px;
+  vertical-align: top;
+  position: relative;
+}
+
+/* line 147, ../sass/partials/modules/_mixitup.scss */
+.mixitup_views_filter {
+  /* Checkbox Hack */
+}
+/* line 149, ../sass/partials/modules/_mixitup.scss */
+.mixitup_views_filter input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+/* line 154, ../sass/partials/modules/_mixitup.scss */
+.mixitup_views_filter label {
+  display: inline-block;
+  margin: 60px 0 10px 0;
+  cursor: pointer;
+  padding: .4em .8em;
+  background: #666;
+  border: 0;
+  color: #ddd;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 4px;
+}
+/* line 167, ../sass/partials/modules/_mixitup.scss */
+.mixitup_views_filter input[type=checkbox]:checked + label {
+  background: #77c337;
 }
 
 /* line 173, ../sass/partials/modules/_mixitup.scss */
@@ -3307,6 +3307,15 @@ div.view-tweets ul {
   top: 149px;
   right: 16px;
   color: white;
+}
+
+/* line 261, ../sass/partials/modules/_mixitup.scss */
+.pane-mixitup-test-panel-pane-1 {
+  margin-bottom: 0;
+}
+/* line 264, ../sass/partials/modules/_mixitup.scss */
+.pane-mixitup-test-panel-pane-1 h2.pane-title {
+  display: none;
 }
 
 /* line 53, ../sass/partials/design/_design.scss */

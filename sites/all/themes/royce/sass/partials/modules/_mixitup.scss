@@ -42,6 +42,21 @@
       padding: 24px;
     }
 
+    #reset {
+      position: absolute;
+      margin-top: 0.4em;
+      margin-bottom: 0.4em;
+      display: inline;
+      cursor: pointer;
+      padding: 0.4em 0.8em;
+      border: 0px;
+      color: rgb(221, 221, 221);
+      font-size: 16px;
+      font-weight: 300;
+      border-radius: 4px;
+      background: rgb(102, 102, 102);
+    }
+
   }
 
 }
@@ -153,21 +168,6 @@
     background: #77c337;
   }
 
-  #reset {
-    position: absolute;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
-    display: inline;
-    cursor: pointer;
-    padding: 0.4em 0.8em;
-    border: 0px;
-    color: rgb(221, 221, 221);
-    font-size: 16px;
-    font-weight: 300;
-    border-radius: 4px;
-    background: rgb(102, 102, 102);
-  }
-
 }
 
 .form-checkboxes.mixitup_views_filter .form-item, .form-radios .form-item {
@@ -255,4 +255,13 @@
   top: 149px;
   right: 16px;
   color: white;
+}
+
+
+.pane-mixitup-test-panel-pane-1 {
+  margin-bottom: 0;
+
+  h2.pane-title {
+    display: none;
+  }
 }
