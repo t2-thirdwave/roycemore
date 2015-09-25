@@ -197,3 +197,32 @@ function royce_js_alter(&$js) {
 function royce_date_all_day_label() {
   return t('');
 }
+
+
+
+/**
+ * Implements theme_field__field_tags().
+ */
+function royce_field__field_tags__digital_artifact(&$vars) {
+  $output = '';
+ 
+  // Render the label if it's not hidden.
+  if (!$vars['label_hidden']) {
+    $output .= '<div class="field-label"' . $vars['title_attributes'] . '>' . $vars['label'] . ':&nbsp;</div>';
+  }
+ 
+  // Render the items.
+  $index = 0;
+  $output .= '<div class="field-items"' . $vars['content_attributes'] . '>';
+  foreach ($vars['items'] as $delta => $item) {
+    $classes = 'field-item ' . ($delta % 2 ? 'odd' : 'even');
+    $output .= ($index ? ',' : '') . ' <div class="' . $classes . '"' . $vars['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+    $index++;
+  }
+  $output .= '</div>';
+ 
+  // Render the top-level div.
+  $output = '<div class="' . $vars['classes'] . '"' . $vars['atributes'] . '>' . $output . '</div>';
+ 
+  return $output;
+}

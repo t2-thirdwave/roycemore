@@ -3109,13 +3109,6 @@ div.view-tweets ul {
   margin-left: 1em;
 }
 /* line 38, ../sass/partials/modules/_mixitup.scss */
-.view-mixitup-test .miu_controls .form-type-checkboxes, .view-mixitup-test .filters_wrapper .form-type-checkboxes {
-  margin: 0;
-  width: 100%;
-  text-align: center;
-  padding: 24px;
-}
-/* line 45, ../sass/partials/modules/_mixitup.scss */
 .view-mixitup-test .miu_controls #reset, .view-mixitup-test .filters_wrapper #reset {
   position: absolute;
   margin-top: 0.4em;
@@ -3129,6 +3122,14 @@ div.view-tweets ul {
   font-weight: 300;
   border-radius: 4px;
   background: #666666;
+}
+
+/* line 57, ../sass/partials/modules/_mixitup.scss */
+html.js .view-mixitup-test .filters_wrapper .form-type-checkboxes {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  padding: 24px;
 }
 
 /* line 64, ../sass/partials/modules/_mixitup.scss */
@@ -3171,64 +3172,54 @@ div.view-tweets ul {
 }
 
 /* line 102, ../sass/partials/modules/_mixitup.scss */
-.miu_container .mix.category-1 {
-  border-top: 2px solid limegreen;
-}
-
-/* line 106, ../sass/partials/modules/_mixitup.scss */
-.miu_container .mix.category-2 {
-  border-top: 2px solid yellow;
-}
-
-/* line 110, ../sass/partials/modules/_mixitup.scss */
 .miu_container .mix:after {
   content: attr(data-myorder);
   color: white;
   font-size: 16px;
-  display: inline-block;
+  display: none;
   vertical-align: top;
   padding: 4% 6%;
   font-weight: 700;
 }
 
-/* line 120, ../sass/partials/modules/_mixitup.scss */
+/* line 112, ../sass/partials/modules/_mixitup.scss */
 .miu_container .mix:before {
   content: '';
   display: inline-block;
 }
 
-@media all and (min-width: 420px) {
-  /* line 128, ../sass/partials/modules/_mixitup.scss */
+@media all and (min-width: 640px) {
+  /* line 119, ../sass/partials/modules/_mixitup.scss */
   .miu_container .mix,
   .miu_container .gap {
     width: 32%;
   }
 }
-@media all and (min-width: 640px) {
-  /* line 135, ../sass/partials/modules/_mixitup.scss */
+@media all and (min-width: 960px) {
+  /* line 126, ../sass/partials/modules/_mixitup.scss */
   .miu_container .mix,
   .miu_container .gap {
     width: 23.5%;
   }
 }
-/* line 141, ../sass/partials/modules/_mixitup.scss */
+/* line 132, ../sass/partials/modules/_mixitup.scss */
 .mix_item--inside {
-  padding: 16px;
+  padding: 0 6px;
   vertical-align: top;
   position: relative;
 }
 
-/* line 147, ../sass/partials/modules/_mixitup.scss */
+/* line 138, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter {
   /* Checkbox Hack */
 }
-/* line 149, ../sass/partials/modules/_mixitup.scss */
+/* line 140, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter input[type=checkbox] {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
-/* line 154, ../sass/partials/modules/_mixitup.scss */
+/* line 145, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter label {
   display: inline-block;
   margin: 60px 0 10px 0;
@@ -3241,81 +3232,404 @@ div.view-tweets ul {
   font-weight: 300;
   border-radius: 4px;
 }
-/* line 167, ../sass/partials/modules/_mixitup.scss */
+/* line 158, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter input[type=checkbox]:checked + label {
   background: #77c337;
 }
 
-/* line 173, ../sass/partials/modules/_mixitup.scss */
+/* line 164, ../sass/partials/modules/_mixitup.scss */
 .form-checkboxes.mixitup_views_filter .form-item, .form-radios .form-item {
   display: inline-block;
 }
 
-/* line 191, ../sass/partials/modules/_mixitup.scss */
-.wrapper--digital-artifacts {
-  background-color: ghostwhite;
-}
-/* line 194, ../sass/partials/modules/_mixitup.scss */
+/* line 184, ../sass/partials/modules/_mixitup.scss */
 .wrapper--digital-artifacts .l-container {
-  padding: 72px 0;
+  padding: 48px 0;
+  max-width: 100%;
 }
-/* line 198, ../sass/partials/modules/_mixitup.scss */
+/* line 189, ../sass/partials/modules/_mixitup.scss */
 .wrapper--digital-artifacts h1, .wrapper--digital-artifacts h2 {
-  margin-top: 0;
+  margin-top: 12px;
   text-align: left;
+  font-size: 16px;
 }
 
-/* line 208, ../sass/partials/modules/_mixitup.scss */
+/* line 200, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter .form-item-filter-3-.tid-35 label {
   background-color: #3F9A57;
 }
-/* line 214, ../sass/partials/modules/_mixitup.scss */
+/* line 206, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter .form-item-filter-3-.tid-34 label {
   background-color: #3F749A;
 }
-/* line 220, ../sass/partials/modules/_mixitup.scss */
+/* line 212, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter .form-item-filter-3-.tid-39 label {
   background-color: #9A3F97;
 }
-/* line 226, ../sass/partials/modules/_mixitup.scss */
+/* line 218, ../sass/partials/modules/_mixitup.scss */
 .mixitup_views_filter .form-item-filter-3-.tid-37 label {
   background-color: #E9EC1C;
   color: black;
 }
 
-/* line 234, ../sass/partials/modules/_mixitup.scss */
+/* line 226, ../sass/partials/modules/_mixitup.scss */
 .field-digital-artifact-video {
   position: relative;
 }
-/* line 237, ../sass/partials/modules/_mixitup.scss */
+/* line 229, ../sass/partials/modules/_mixitup.scss */
 .field-digital-artifact-video .colorbox {
   display: block;
 }
-/* line 241, ../sass/partials/modules/_mixitup.scss */
+/* line 233, ../sass/partials/modules/_mixitup.scss */
 .field-digital-artifact-video svg {
   position: absolute;
 }
 
-/* line 248, ../sass/partials/modules/_mixitup.scss */
-.field.field-name-field-digital-artifact-schools {
-  background-color: #3F9A57;
-  display: inline-block;
-  padding: 6px 12px;
-  font-size: 13px;
-  font-weight: 400;
+/* line 241, ../sass/partials/modules/_mixitup.scss */
+.mix_item--inside .field.field-name-field-digital-artifact-schools {
   position: absolute;
-  top: 149px;
-  right: 16px;
+  top: -12px;
+  right: -6px;
+}
+/* line 246, ../sass/partials/modules/_mixitup.scss */
+.mix_item--inside .field.field-name-field-digital-artifact-schools:nth-child(2) {
+  background-color: #000;
+  top: 12px;
+}
+/* line 250, ../sass/partials/modules/_mixitup.scss */
+.mix_item--inside .field.field-name-field-digital-artifact-schools:nth-child(3) {
+  background-color: #ddd;
+  top: 36px;
+}
+/* line 255, ../sass/partials/modules/_mixitup.scss */
+.mix_item--inside .field.field-name-field-digital-artifact-schools span {
+  background-color: #DDD;
+  display: block;
+  font-size: 12px;
   color: white;
+  padding: 3px 10px;
+  text-transform: uppercase;
+}
+/* line 264, ../sass/partials/modules/_mixitup.scss */
+.mix_item--inside .field.field-name-field-digital-artifact-schools span.term-tid-35 {
+  background-color: #3F9A57;
+}
+/* line 268, ../sass/partials/modules/_mixitup.scss */
+.mix_item--inside .field.field-name-field-digital-artifact-schools span.term-tid-37 {
+  background-color: #DC4A4A;
+}
+/* line 272, ../sass/partials/modules/_mixitup.scss */
+.mix_item--inside .field.field-name-field-digital-artifact-schools span.term-tid-39 {
+  background-color: #4A3F9A;
 }
 
-/* line 261, ../sass/partials/modules/_mixitup.scss */
+/* line 279, ../sass/partials/modules/_mixitup.scss */
 .pane-mixitup-test-panel-pane-1 {
   margin-bottom: 0;
 }
-/* line 264, ../sass/partials/modules/_mixitup.scss */
+/* line 282, ../sass/partials/modules/_mixitup.scss */
 .pane-mixitup-test-panel-pane-1 h2.pane-title {
   display: none;
+}
+
+/* line 291, ../sass/partials/modules/_mixitup.scss */
+#mixitup-views-filters-form {
+  position: relative;
+}
+
+/**** Isotope styles ****/
+/* required for isotope-containers to inherit vertical size from window */
+/* line 5, ../sass/partials/modules/_isotope.scss */
+html,
+body {
+  height: 100%;
+}
+
+/* line 9, ../sass/partials/modules/_isotope.scss */
+#isotope-container {
+  margin: 0 auto;
+  max-width: 90%;
+}
+@media (min-width: 64em) {
+  /* line 9, ../sass/partials/modules/_isotope.scss */
+  #isotope-container {
+    max-width: 1000px;
+  }
+}
+@media (min-width: 87.5em) {
+  /* line 9, ../sass/partials/modules/_isotope.scss */
+  #isotope-container {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 100em) {
+  /* line 9, ../sass/partials/modules/_isotope.scss */
+  #isotope-container {
+    max-width: 1400px;
+  }
+}
+@media (min-width: 125em) {
+  /* line 9, ../sass/partials/modules/_isotope.scss */
+  #isotope-container {
+    max-width: 1800px;
+  }
+}
+
+/* line 33, ../sass/partials/modules/_isotope.scss */
+.isotope-element {
+  width: 90%;
+  height: auto;
+  margin: 5%;
+  float: none;
+  display: inline-block;
+  overflow: visible;
+  position: relative;
+  background-color: transparent;
+}
+@media (min-width: 29.9375em) {
+  /* line 33, ../sass/partials/modules/_isotope.scss */
+  .isotope-element {
+    margin: 3%;
+    width: 43%;
+  }
+}
+@media (min-width: 48em) {
+  /* line 33, ../sass/partials/modules/_isotope.scss */
+  .isotope-element {
+    margin: 1.5%;
+    width: 30%;
+  }
+}
+@media (min-width: 64em) {
+  /* line 33, ../sass/partials/modules/_isotope.scss */
+  .isotope-element {
+    margin: 2%;
+    width: 20.5%;
+  }
+}
+@media (min-width: 87.5em) {
+  /* line 33, ../sass/partials/modules/_isotope.scss */
+  .isotope-element {
+    margin: 2%;
+    width: 15.5%;
+  }
+}
+@media (min-width: 100em) {
+  /* line 33, ../sass/partials/modules/_isotope.scss */
+  .isotope-element {
+    margin: 2%;
+    width: 15.5%;
+  }
+}
+
+/* line 73, ../sass/partials/modules/_isotope.scss */
+.isotope-element img {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 80, ../sass/partials/modules/_isotope.scss */
+.variable-sizes .isotope-element.width2 {
+  width: 230px;
+}
+
+/* line 82, ../sass/partials/modules/_isotope.scss */
+.variable-sizes .isotope-element.height2 {
+  height: 230px;
+}
+
+/* line 84, ../sass/partials/modules/_isotope.scss */
+.variable-sizes .isotope-element.width2.height2 {
+  font-size: 2.0em;
+}
+
+/* line 90, ../sass/partials/modules/_isotope.scss */
+.isotope-element.large,
+.variable-sizes .isotope-element.large,
+.variable-sizes .isotope-element.large.width2.height2 {
+  font-size: 3.0em;
+  width: 350px;
+  height: 350px;
+  z-index: 100;
+}
+
+/* line 97, ../sass/partials/modules/_isotope.scss */
+.clickable .isotope-element:hover {
+  cursor: pointer;
+}
+
+/* line 101, ../sass/partials/modules/_isotope.scss */
+.clickable .isotope-element:hover h3 {
+  text-shadow: 0 0 10px white, 0 0 10px white;
+}
+
+/* line 108, ../sass/partials/modules/_isotope.scss */
+.clickable .isotope-element:hover h2 {
+  color: white;
+}
+
+/**** Example Filters ****/
+/* line 114, ../sass/partials/modules/_isotope.scss */
+.isotope-options {
+  background-color: transparent;
+  max-width: 1184px;
+  margin: 24px auto 48px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* line 123, ../sass/partials/modules/_isotope.scss */
+.view-isotope-example-filter-block ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 132, ../sass/partials/modules/_isotope.scss */
+.view-isotope-example-filter-block li {
+  display: inline-block;
+  padding: 6px 4px;
+  text-align: center;
+}
+@media (min-width: 29.9375em) {
+  /* line 132, ../sass/partials/modules/_isotope.scss */
+  .view-isotope-example-filter-block li {
+    padding: 12px 4px;
+  }
+}
+
+/* line 141, ../sass/partials/modules/_isotope.scss */
+.view-isotope-example-filter-block li a {
+  border-radius: 3px;
+  padding: .4em .8em;
+  background: #666;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 4px;
+}
+@media (min-width: 29.9375em) {
+  /* line 141, ../sass/partials/modules/_isotope.scss */
+  .view-isotope-example-filter-block li a {
+    font-size: 16px;
+  }
+}
+
+/* line 158, ../sass/partials/modules/_isotope.scss */
+.view-isotope-example-filter-block li a.selected {
+  background: #77c337;
+}
+
+/* line 162, ../sass/partials/modules/_isotope.scss */
+.view-isotope-example-filter-block li a:hover[data-option-value=".early-childhood"], .view-isotope-example-filter-block li a.selected[data-option-value=".early-childhood"] {
+  background: #3858B1;
+}
+
+/* line 165, ../sass/partials/modules/_isotope.scss */
+.view-isotope-example-filter-block li a:hover[data-option-value=".lower-school"], .view-isotope-example-filter-block li a.selected[data-option-value=".lower-school"] {
+  background: #3895B1;
+}
+
+/* line 168, ../sass/partials/modules/_isotope.scss */
+.view-isotope-example-filter-block li a:hover[data-option-value=".middle-school"], .view-isotope-example-filter-block li a.selected[data-option-value=".middle-school"] {
+  background: #38B195;
+}
+
+/* line 171, ../sass/partials/modules/_isotope.scss */
+.view-isotope-example-filter-block li a:hover[data-option-value=".upper-school"], .view-isotope-example-filter-block li a.selected[data-option-value=".upper-school"] {
+  background: #3F9A57;
+}
+
+/* line 174, ../sass/partials/modules/_isotope.scss */
+.view-isotope-example-filter-block li a:hover[data-option-value=".jst-group-projects"], .view-isotope-example-filter-block li a.selected[data-option-value=".jst-group-projects"] {
+  background: #AC16D2;
+}
+
+/* line 177, ../sass/partials/modules/_isotope.scss */
+.view-isotope-example-filter-block li a:hover[data-option-value=".jst-independent-projects"], .view-isotope-example-filter-block li a.selected[data-option-value=".jst-independent-projects"] {
+  background: #5512cc;
+}
+
+/* line 180, ../sass/partials/modules/_isotope.scss */
+.view-isotope-example-filter-block li a:hover[data-option-value=".centennial"], .view-isotope-example-filter-block li a.selected[data-option-value=".centennial"] {
+  background: #73CC12;
+}
+
+/* line 4, ../sass/partials/modules/_gallery.scss */
+.page-gallery .wrapper--main {
+  background-color: ghostwhite;
+}
+
+/* line 8, ../sass/partials/modules/_gallery.scss */
+.media-intro {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* line 15, ../sass/partials/modules/_gallery.scss */
+.gallery-item {
+  position: relative;
+  height: 100%;
+}
+
+/* line 24, ../sass/partials/modules/_gallery.scss */
+.gallery-item__title {
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+  line-height: 14px;
+  min-height: 28px;
+}
+
+/* line 33, ../sass/partials/modules/_gallery.scss */
+.gallery-item__categories {
+  position: absolute;
+  top: -12px;
+  right: -10px;
+}
+/* line 39, ../sass/partials/modules/_gallery.scss */
+.gallery-item__categories ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+/* line 45, ../sass/partials/modules/_gallery.scss */
+.gallery-item__categories ul li span {
+  display: inline-block;
+  color: #fff;
+  background-color: #3F9A57;
+  padding: 3px 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 53, ../sass/partials/modules/_gallery.scss */
+.gallery-item__categories ul li span.term-tid-33 {
+  background-color: #3895B1;
+}
+/* line 57, ../sass/partials/modules/_gallery.scss */
+.gallery-item__categories ul li span.term-tid-34 {
+  background-color: #38B195;
+}
+/* line 61, ../sass/partials/modules/_gallery.scss */
+.gallery-item__categories ul li span.term-tid-36 {
+  background-color: #3858B1;
+}
+/* line 65, ../sass/partials/modules/_gallery.scss */
+.gallery-item__categories ul li span.term-tid-37 {
+  background-color: #73CC12;
+}
+/* line 69, ../sass/partials/modules/_gallery.scss */
+.gallery-item__categories ul li span.term-tid-38 {
+  background: #AC16D2;
+}
+/* line 73, ../sass/partials/modules/_gallery.scss */
+.gallery-item__categories ul li span.term-tid-39 {
+  background-color: #5512cc;
 }
 
 /* line 53, ../sass/partials/design/_design.scss */
