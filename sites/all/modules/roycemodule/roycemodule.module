@@ -87,3 +87,89 @@ function roycemodule_wysiwyg_filter_elements_blacklist_alter(&$blacklist){
 }
 
 
+
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function roycemodule_field_formatter_info() {
+  return array(
+    'taxonomy_term_reference_link_with_class' => array(
+      'label' => t('Link with class'),
+      'field types' => array('taxonomy_term_reference'),
+    ),
+    'taxonomy_term_reference_plain_with_class' => array(
+      'label' => t('Plain text with class'),
+      'field types' => array('taxonomy_term_reference'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function roycemodule_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  // Terms whose tid is 'autocreate' do not exist
+  // yet and $item['taxonomy_term'] is not set. Theme such terms as
+  // just their name.
+
+  switch ($display['type']) {
+    case 'taxonomy_term_reference_link_with_class':
+      foreach ($items as $delta => $item) {
+        if ($item['tid'] == 'autocreate') {
+          $element[$delta] = array(
+            '#value' => check_plain($item['name']),
+            '#theme' => 'html_tag',
+            '#tag' => 'span',
+            '#attributes' => array(
+              'class' => array('term-tid-new'),
+            ),
+          );
+        }
+        else {
+          $term = $item['taxonomy_term'];
+          $uri = entity_uri('taxonomy_term', $term);
+          $uri['options']['attributes']['class'][] = 'term-tid-' . $term->tid;
+          $element[$delta] = array(
+            '#type' => 'link',
+            '#title' => $term->name,
+            '#href' => $uri['path'],
+            '#options' => $uri['options'],
+          );
+        }
+      }
+
+      break;
+
+    case 'taxonomy_term_reference_plain_with_class':
+      foreach ($items as $delta => $item) {
+        $name = ($item['tid'] != 'autocreate' ? $item['taxonomy_term']->name : $item['name']);
+        $tid = ($item['tid'] != 'autocreate' ? $item['taxonomy_term']->tid : 'new');
+        $element[$delta] = array(
+          '#value' => check_plain($name),
+          '#theme' => 'html_tag',
+          '#tag' => 'span',
+          '#attributes' => array(
+            'class' => array('term-tid-' . $tid),
+          ),
+        );
+      }
+      break;
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_prepare_view().
+ *
+ * This preloads all taxonomy terms for multiple loaded objects at once and
+ * unsets values for invalid terms that do not exist.
+ */
+function roycemodule_field_formatter_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items, $displays) {
+  // Call prepare view formatter for a taxonomy term
+  taxonomy_field_formatter_prepare_view($entity_type, $entities, $field, $instances, $langcode, $items, $displays);
+}
+
