@@ -40,9 +40,6 @@ stylesheets[all][] = 'stylesheets/style.css'
 ; scripts[] = 'js/mlpushmenu.js'
 ; scripts[] = 'js/jquery.dlmenu.js'
 
-scripts[] = js/jquery.mixitup.min.js
-scripts[] = js/scripts.js
-
 ; ========================================
 ; Modernizr
 ; ========================================
