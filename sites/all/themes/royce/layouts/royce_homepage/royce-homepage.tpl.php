@@ -11,8 +11,24 @@
 ?>
   <?php print $content['header']; ?>
 
-
 <main id="main" role="main" class="wrapper--main panel-layout royce-homepage <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print 'id="' . $css_id . '"'; } ?>>
+
+<?php if (!empty($content['aboutroycemore'])): ?>
+  <div class="wrapper wrapper--about-search">
+    <section class="l-container royce-homepage__section">
+      <div class="l-grid2-1">
+        <div class="royce-homepage-inner">
+          <?php print $content['aboutroycemore']; ?>
+        </div>
+      </div>
+      <div class="l-grid2-2">
+        <div class="royce-homepage-inner">
+          <?php print $content['searchside']; ?>
+        </div>
+      </div>
+    </section>
+  </div>
+<?php endif; ?>
 
 <?php if (!empty($content['update1'])): ?>
 
