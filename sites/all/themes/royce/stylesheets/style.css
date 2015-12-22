@@ -722,20 +722,20 @@ p + .drop-cap {
 }
 
 /* line 27, ../sass/partials/global/_extendables.scss */
-.light-on-dark a, .pane--green a, .field-slide-text a {
+.light-on-dark a, .pane--green a, .pane--emergency a, .field-slide-text a {
   color: white;
   text-decoration: underline;
 }
 /* line 32, ../sass/partials/global/_extendables.scss */
-.light-on-dark a:hover, .pane--green a:hover, .field-slide-text a:hover, .light-on-dark a:focus, .pane--green a:focus, .field-slide-text a:focus {
+.light-on-dark a:hover, .pane--green a:hover, .pane--emergency a:hover, .field-slide-text a:hover, .light-on-dark a:focus, .pane--green a:focus, .pane--emergency a:focus, .field-slide-text a:focus {
   color: white;
 }
 /* line 36, ../sass/partials/global/_extendables.scss */
-.light-on-dark a:visited, .pane--green a:visited, .field-slide-text a:visited {
+.light-on-dark a:visited, .pane--green a:visited, .pane--emergency a:visited, .field-slide-text a:visited {
   color: white;
 }
 /* line 42, ../sass/partials/global/_extendables.scss */
-.light-on-dark h1, .pane--green h1, .field-slide-text h1, .light-on-dark h2, .pane--green h2, .field-slide-text h2, .light-on-dark h3, .pane--green h3, .field-slide-text h3, .light-on-dark h4, .pane--green h4, .field-slide-text h4, .light-on-dark h5, .pane--green h5, .field-slide-text h5, .light-on-dark h6, .pane--green h6, .field-slide-text h6 {
+.light-on-dark h1, .pane--green h1, .pane--emergency h1, .field-slide-text h1, .light-on-dark h2, .pane--green h2, .pane--emergency h2, .field-slide-text h2, .light-on-dark h3, .pane--green h3, .pane--emergency h3, .field-slide-text h3, .light-on-dark h4, .pane--green h4, .pane--emergency h4, .field-slide-text h4, .light-on-dark h5, .pane--green h5, .pane--emergency h5, .field-slide-text h5, .light-on-dark h6, .pane--green h6, .pane--emergency h6, .field-slide-text h6 {
   color: white;
 }
 
@@ -1926,42 +1926,53 @@ img.adaptive-image {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* line 53, ../sass/partials/modules/_royce-panes.scss */
+/* line 52, ../sass/partials/modules/_royce-panes.scss */
+.pane--emergency {
+  background-color: #dc0032;
+  color: white;
+}
+/* line 57, ../sass/partials/modules/_royce-panes.scss */
+.pane--emergency h2 {
+  color: white;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* line 68, ../sass/partials/modules/_royce-panes.scss */
 .pane--lightgrey {
   background-color: #efefef;
 }
 
-/* line 59, ../sass/partials/modules/_royce-panes.scss */
+/* line 74, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu {
   padding: 24px;
   background: #fafafa;
 }
-/* line 62, ../sass/partials/modules/_royce-panes.scss */
+/* line 77, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu h2 {
   margin-bottom: 1rem;
 }
-/* line 66, ../sass/partials/modules/_royce-panes.scss */
+/* line 81, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu ul.menu {
   margin: 0;
   padding: 0;
 }
-/* line 70, ../sass/partials/modules/_royce-panes.scss */
+/* line 85, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu ul.menu li {
   margin: 0;
   list-style: none;
 }
-/* line 74, ../sass/partials/modules/_royce-panes.scss */
+/* line 89, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu ul.menu li a {
   display: block;
   font-size: 18px;
   line-height: 24px;
   padding: 2px 12px 2px 0;
 }
-/* line 81, ../sass/partials/modules/_royce-panes.scss */
+/* line 96, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu ul.menu li a.active {
   color: black;
 }
-/* line 91, ../sass/partials/modules/_royce-panes.scss */
+/* line 106, ../sass/partials/modules/_royce-panes.scss */
 .pane--menu li.expanded,
 .pane--menu li.collapsed,
 .pane--menu li.leaf {
