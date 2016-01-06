@@ -708,16 +708,16 @@ p + .drop-cap {
  *
  */
 /* line 8, ../sass/partials/global/_extendables.scss */
-.clearfix {
+.clearfix, .admissions-info {
   *zoom: 1;
 }
 /* line 14, ../sass/partials/global/_extendables.scss */
-.clearfix:before, .clearfix:after {
+.clearfix:before, .admissions-info:before, .clearfix:after, .admissions-info:after {
   display: table;
   content: "";
 }
 /* line 19, ../sass/partials/global/_extendables.scss */
-.clearfix:after {
+.clearfix:after, .admissions-info:after {
   clear: both;
 }
 
@@ -1620,17 +1620,22 @@ blockquote {
   background: #91d15c;
 }
 
-/* line 55, ../sass/partials/modules/_buttons.scss */
+/* line 52, ../sass/partials/modules/_buttons.scss */
+a.btn--a, a.form-submit {
+  color: white;
+}
+
+/* line 58, ../sass/partials/modules/_buttons.scss */
 .btn--b {
   background: #c7e7ac;
   color: #77c337;
 }
-/* line 60, ../sass/partials/modules/_buttons.scss */
+/* line 63, ../sass/partials/modules/_buttons.scss */
 .btn--b:focus, .btn--b:hover {
   background: #e2f3d3;
 }
 
-/* line 67, ../sass/partials/modules/_buttons.scss */
+/* line 70, ../sass/partials/modules/_buttons.scss */
 .btn--block {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1638,28 +1643,28 @@ blockquote {
   width: 100%;
 }
 
-/* line 76, ../sass/partials/modules/_buttons.scss */
+/* line 79, ../sass/partials/modules/_buttons.scss */
 .btn--large {
   font-size: 150%;
   padding-left: 100px;
   padding-right: 100px;
 }
 
-/* line 84, ../sass/partials/modules/_buttons.scss */
+/* line 87, ../sass/partials/modules/_buttons.scss */
 .btn--mini {
   font-size: 70%;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-/* line 92, ../sass/partials/modules/_buttons.scss */
+/* line 95, ../sass/partials/modules/_buttons.scss */
 .btn--small {
   font-size: 90%;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-/* line 99, ../sass/partials/modules/_buttons.scss */
+/* line 102, ../sass/partials/modules/_buttons.scss */
 .button--simple {
   border: 1px solid;
   padding: 12px;
@@ -3833,4 +3838,94 @@ body {
     display: inline-block;
     width: 40%;
   }
+}
+
+/* line 185, ../sass/partials/design/_design.scss */
+.tuition_info {
+  display: none;
+}
+
+/* line 188, ../sass/partials/design/_design.scss */
+.tuition_error {
+  color: red;
+}
+
+/* line 191, ../sass/partials/design/_design.scss */
+.tuition_assumption {
+  color: #aaa;
+  margin-top: 24px;
+  font-size: 13px;
+}
+
+/* line 200, ../sass/partials/design/_design.scss */
+.tuition_min, .tuition_max {
+  font-weight: bold;
+}
+
+/* line 203, ../sass/partials/design/_design.scss */
+.tuition_full {
+  color: #777;
+}
+
+/* line 209, ../sass/partials/design/_design.scss */
+.admissions-info {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* line 215, ../sass/partials/design/_design.scss */
+.admissions-info__photo {
+  max-width: 140px;
+  float: left;
+  margin-right: 24px;
+}
+
+/* line 220, ../sass/partials/design/_design.scss */
+.admissions-info__content {
+  padding: 24px;
+}
+
+/* line 224, ../sass/partials/design/_design.scss */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 231, ../sass/partials/design/_design.scss */
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeIn {
+  /* line 237, ../sass/partials/design/_design.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 241, ../sass/partials/design/_design.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  /* line 247, ../sass/partials/design/_design.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 251, ../sass/partials/design/_design.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+/* line 256, ../sass/partials/design/_design.scss */
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }

@@ -40,6 +40,8 @@ stylesheets[all][] = 'stylesheets/style.css'
 ; scripts[] = 'js/mlpushmenu.js'
 ; scripts[] = 'js/jquery.dlmenu.js'
 
+scripts[] = 'js/slidingscale.js'
+
 ; ========================================
 ; Modernizr
 ; ========================================
