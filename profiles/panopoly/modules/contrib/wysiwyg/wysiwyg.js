@@ -43,8 +43,13 @@ Drupal.behaviors.attachWysiwyg = {
       return;
     }
 
-    $('.wysiwyg', context).once('wysiwyg', function () {
-      if (!this.id || typeof Drupal.settings.wysiwyg.triggers[this.id] === 'undefined') {
+    // Specifically target input elements in case selectbox wrappers have
+    // hidden the real element and cloned its attributes.
+    $('.wysiwyg:input', context).once('wysiwyg', function () {
+      // Skip processing if the trigger is unknown or does not exist in this
+      // document. Can happen after a form was removed but Drupal.ajax keeps a
+      // lingering reference to the form and calls Drupal.attachBehaviors().
+      if (!this.id || typeof Drupal.settings.wysiwyg.triggers[this.id] === 'undefined' || !document.getElementById(this.id)) {
         return;
       }
       var $this = $(this);
@@ -87,10 +92,10 @@ Drupal.behaviors.attachWysiwyg = {
     if (trigger == 'serialize') {
       // Removing the wysiwyg-processed class guarantees that the editor will
       // be reattached. Only do this if we're planning to destroy the editor.
-      wysiwygs = $('.wysiwyg-processed', context);
+      wysiwygs = $('.wysiwyg-processed:input', context);
     }
     else {
-      wysiwygs = $('.wysiwyg', context).removeOnce('wysiwyg');
+      wysiwygs = $('.wysiwyg:input', context).removeOnce('wysiwyg');
     }
     wysiwygs.each(function () {
       var params = Drupal.settings.wysiwyg.triggers[this.id];
@@ -185,7 +190,7 @@ Drupal.wysiwygAttachToggleLink = function(context, params) {
     $(a).attr({ id: 'wysiwyg-toggle-' + params.field, href: 'javascript:void(0);' }).append(text);
     var div = document.createElement('div');
     $(div).addClass('wysiwyg-toggle-wrapper').append(a);
-    $('#' + params.trigger).parents('.fieldset-wrapper').prepend(div);
+    $('#' + params.field).after(div);
   }
   $('#wysiwyg-toggle-' + params.field)
     .html(params.status ? Drupal.settings.wysiwyg.disable : Drupal.settings.wysiwyg.enable).show()

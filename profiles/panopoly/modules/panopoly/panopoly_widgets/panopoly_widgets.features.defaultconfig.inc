@@ -10,9 +10,26 @@
 function panopoly_widgets_defaultconfig_features() {
   return array(
     'panopoly_widgets' => array(
+      'strongarm' => 'strongarm',
       'user_default_permissions' => 'user_default_permissions',
     ),
   );
+}
+
+/**
+ * Implements hook_defaultconfig_strongarm().
+ */
+function panopoly_widgets_defaultconfig_strongarm() {
+  $export = array();
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'media_wysiwyg_default_render';
+  $strongarm->value = 'field_attach';
+  $export['media_wysiwyg_default_render'] = $strongarm;
+
+  return $export;
 }
 
 /**
@@ -20,6 +37,16 @@ function panopoly_widgets_defaultconfig_features() {
  */
 function panopoly_widgets_defaultconfig_user_default_permissions() {
   $permissions = array();
+
+  // Exported permission: 'access media browser'.
+  $permissions['access media browser'] = array(
+    'name' => 'access media browser',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'media',
+  );
 
   // Exported permission: 'add media from remote sources'.
   $permissions['add media from remote sources'] = array(

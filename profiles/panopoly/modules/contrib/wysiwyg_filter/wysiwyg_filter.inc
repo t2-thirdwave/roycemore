@@ -61,7 +61,7 @@ EOT;
  * Get HTML elements blacklist.
  */
 function wysiwyg_filter_get_elements_blacklist() {
-  $blacklist = array(
+  return array(
     'applet',
     'area',
     'base',
@@ -93,9 +93,6 @@ function wysiwyg_filter_get_elements_blacklist() {
     'textarea',
     'title',
   );
-
-  drupal_alter('wysiwyg_filter_elements_blacklist', $blacklist);
-  return $blacklist;
 }
 
 /**

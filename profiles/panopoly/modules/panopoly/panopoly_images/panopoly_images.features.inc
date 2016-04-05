@@ -11,6 +11,9 @@ function panopoly_images_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "file_entity" && $api == "file_default_displays") {
     return array("version" => "1");
   }
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
 }
 
 /**
@@ -21,16 +24,20 @@ function panopoly_images_image_default_styles() {
 
   // Exported image style: panopoly_image_featured.
   $styles['panopoly_image_featured'] = array(
-    'name' => 'panopoly_image_featured',
+    'label' => 'Featured',
     'effects' => array(
-      1 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
+      7 => array(
+        'name' => 'manualcrop_crop',
+        'data' => array(
+          'width' => 48,
+          'height' => 26,
+          'keepproportions' => 1,
+          'reuse_crop_style' => 'panopoly_image_full',
+          'style_name' => 'panopoly_image_featured',
+        ),
+        'weight' => 0,
+      ),
+      5 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 480,
@@ -39,14 +46,7 @@ function panopoly_images_image_default_styles() {
         ),
         'weight' => 1,
       ),
-      3 => array(
-        'label' => 'Crop',
-        'help' => 'Cropping will remove portions of an image to make it the specified dimensions.',
-        'effect callback' => 'image_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_crop_form',
-        'summary theme' => 'image_crop_summary',
-        'module' => 'image',
+      6 => array(
         'name' => 'image_crop',
         'data' => array(
           'width' => 480,
@@ -56,21 +56,24 @@ function panopoly_images_image_default_styles() {
         'weight' => 3,
       ),
     ),
-    'label' => 'panopoly_image_featured',
   );
 
   // Exported image style: panopoly_image_full.
   $styles['panopoly_image_full'] = array(
-    'name' => 'panopoly_image_full',
+    'label' => 'Full width (of the containing region - could upscale small images)',
     'effects' => array(
       2 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
+        'name' => 'manualcrop_crop',
+        'data' => array(
+          'width' => 20,
+          'height' => 20,
+          'keepproportions' => 0,
+          'reuse_crop_style' => '',
+          'style_name' => 'panopoly_image_full',
+        ),
+        'weight' => 1,
+      ),
+      1 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 960,
@@ -80,21 +83,20 @@ function panopoly_images_image_default_styles() {
         'weight' => 2,
       ),
     ),
-    'label' => 'panopoly_image_full',
   );
 
   // Exported image style: panopoly_image_half.
   $styles['panopoly_image_half'] = array(
-    'name' => 'panopoly_image_half',
+    'label' => 'Half width (of the containing region - could upscale small images)',
     'effects' => array(
-      2 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
+      17 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reuse_crop_style' => 'panopoly_image_full',
+        ),
+        'weight' => 0,
+      ),
+      3 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 480,
@@ -104,21 +106,34 @@ function panopoly_images_image_default_styles() {
         'weight' => 1,
       ),
     ),
-    'label' => 'panopoly_image_half',
+  );
+
+  // Exported image style: panopoly_image_original.
+  $styles['panopoly_image_original'] = array(
+    'label' => 'Original size (after manual crop)',
+    'effects' => array(
+      1 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reuse_crop_style' => 'panopoly_image_full',
+        ),
+        'weight' => 0,
+      ),
+    ),
   );
 
   // Exported image style: panopoly_image_quarter.
   $styles['panopoly_image_quarter'] = array(
-    'name' => 'panopoly_image_quarter',
+    'label' => 'Quarter width (of the containing region - could upscale small images)',
     'effects' => array(
-      5 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
+      18 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reuse_crop_style' => 'panopoly_image_full',
+        ),
+        'weight' => 0,
+      ),
+      8 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 240,
@@ -128,21 +143,24 @@ function panopoly_images_image_default_styles() {
         'weight' => 1,
       ),
     ),
-    'label' => 'panopoly_image_quarter',
   );
 
   // Exported image style: panopoly_image_spotlight.
   $styles['panopoly_image_spotlight'] = array(
-    'name' => 'panopoly_image_spotlight',
+    'label' => 'Spotlight widget',
     'effects' => array(
-      2 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most use',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
+      11 => array(
+        'name' => 'manualcrop_crop',
+        'data' => array(
+          'width' => 96,
+          'height' => 56,
+          'keepproportions' => 1,
+          'reuse_crop_style' => 'panopoly_image_full',
+          'style_name' => 'panopoly_image_spotlight',
+        ),
+        'weight' => 1,
+      ),
+      10 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 960,
@@ -151,21 +169,24 @@ function panopoly_images_image_default_styles() {
         'weight' => 2,
       ),
     ),
-    'label' => 'panopoly_image_spotlight',
   );
 
   // Exported image style: panopoly_image_square.
   $styles['panopoly_image_square'] = array(
-    'name' => 'panopoly_image_square',
+    'label' => 'Square',
     'effects' => array(
-      1 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
+      13 => array(
+        'name' => 'manualcrop_crop',
+        'data' => array(
+          'width' => 20,
+          'height' => 20,
+          'keepproportions' => 1,
+          'reuse_crop_style' => 'panopoly_image_full',
+          'style_name' => 'panopoly_image_square',
+        ),
+        'weight' => 0,
+      ),
+      12 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 200,
@@ -174,21 +195,24 @@ function panopoly_images_image_default_styles() {
         'weight' => 1,
       ),
     ),
-    'label' => 'panopoly_image_square',
   );
 
   // Exported image style: panopoly_image_thumbnail.
   $styles['panopoly_image_thumbnail'] = array(
-    'name' => 'panopoly_image_thumbnail',
+    'label' => 'Thumbnail',
     'effects' => array(
-      1 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
+      15 => array(
+        'name' => 'manualcrop_crop',
+        'data' => array(
+          'width' => 20,
+          'height' => 20,
+          'keepproportions' => 1,
+          'reuse_crop_style' => 'panopoly_image_full',
+          'style_name' => 'panopoly_image_thumbnail',
+        ),
+        'weight' => 0,
+      ),
+      14 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 80,
@@ -198,21 +222,13 @@ function panopoly_images_image_default_styles() {
         'weight' => 1,
       ),
     ),
-    'label' => 'panopoly_image_thumbnail',
   );
 
   // Exported image style: panopoly_image_video.
   $styles['panopoly_image_video'] = array(
-    'name' => 'panopoly_image_video',
+    'label' => 'Video widget',
     'effects' => array(
-      1 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
+      16 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 640,
@@ -221,7 +237,6 @@ function panopoly_images_image_default_styles() {
         'weight' => 1,
       ),
     ),
-    'label' => 'panopoly_image_video',
   );
 
   return $styles;

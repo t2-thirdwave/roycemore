@@ -21,7 +21,7 @@ function theme_panels_style_lightgrey_padded_render_pane($vars) {
   $display = $vars['display'];
   $plugin = $vars['style'];
 
-  $content->css_class .= ' pane--lightgrey pane--padded';
+  $content->css_class = ' pane--lightgrey pane--padded';
 
   // if the style is gone or has no theme of its own, just display the output.
   return theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display));

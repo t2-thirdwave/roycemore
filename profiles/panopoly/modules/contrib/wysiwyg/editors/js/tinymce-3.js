@@ -12,15 +12,15 @@
  */
 Drupal.wysiwyg.editor.init.tinymce = function(settings) {
   // Fix Drupal toolbar obscuring editor toolbar in fullscreen mode.
-  var $drupalToolbars = $('#toolbar, #admin-menu', Drupal.overlayChild ? window.parent.document : document);
+  var $drupalToolbar = $('#toolbar', Drupal.overlayChild ? window.parent.document : document);
   tinyMCE.onAddEditor.add(function (mgr, ed) {
     if (ed.id == 'mce_fullscreen') {
-      $drupalToolbars.hide();
+      $drupalToolbar.hide();
     }
   });
   tinyMCE.onRemoveEditor.add(function (mgr, ed) {
     if (ed.id == 'mce_fullscreen') {
-      $drupalToolbars.show();
+      $drupalToolbar.show();
     }
   });
 
@@ -56,12 +56,12 @@ Drupal.wysiwyg.editor.attach.tinymce = function(context, params, settings) {
   tinymce.dom.Event.domLoaded = true;
   // Make toolbar buttons wrappable (required for IE).
   ed.onPostRender.add(function (ed) {
-    var $toolbar = $('<div class="wysiwygToolbar"></div>');
-    $('#' + ed.editorContainer + ' table.mceToolbar > tbody > tr > td').each(function () {
-      $('<div></div>').addClass(this.className).append($(this).children()).appendTo($toolbar);
-    });
-    $('#' + ed.editorContainer + ' table.mceLayout td.mceToolbar').append($toolbar);
-    $('#' + ed.editorContainer + ' table.mceToolbar').remove();
+    // var $toolbar = $('<div class="wysiwygToolbar"></div>');
+    // $('#' + ed.editorContainer + ' table.mceToolbar > tbody > tr > td').each(function () {
+    //   $('<div></div>').addClass(this.className).append($(this).children()).appendTo($toolbar);
+    // });
+    // $('#' + ed.editorContainer + ' table.mceLayout td.mceToolbar').append($toolbar);
+    // $('#' + ed.editorContainer + ' table.mceToolbar').remove();
   });
 
   // Remove TinyMCE's internal mceItem class, which was incorrectly added to
@@ -76,13 +76,6 @@ Drupal.wysiwyg.editor.attach.tinymce = function(context, params, settings) {
 
   // Attach editor.
   ed.render();
-  if (tinymce.minorVersion == '5.7') {
-    // Work around a TinyMCE bug hiding new instances when switching to them.
-    // @see http://www.tinymce.com/develop/bugtracker_view.php?id=5510
-    setTimeout(function () {
-      tinymce.DOM.show(ed.editorContainer);
-    }, 1);
-  }
 };
 
 /**

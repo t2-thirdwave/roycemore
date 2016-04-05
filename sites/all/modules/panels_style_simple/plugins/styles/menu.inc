@@ -21,7 +21,7 @@ function theme_panels_style_menu_render_pane($vars) {
   $display = $vars['display'];
   $plugin = $vars['style'];
 
-  $content->css_class .= ' pane--menu';
+  $content->css_class = ' pane--menu';
 
   // if the style is gone or has no theme of its own, just display the output.
   return theme('panels_pane', array('content' => $content, 'pane' => $pane, 'display' => $display));
