@@ -56,7 +56,7 @@ function roycemodule_entity_info_alter(&$entity_info) {
 
 }
 
-function roycemodule_wysiwyg_filter_elements_blacklist_alter(&$blacklist){
+function roycemodule_wysiwyg_filter_get_elements_blacklist_alter(&$blacklist){
   $blacklist = array(
     'applet',
     'area',
@@ -171,5 +171,15 @@ function roycemodule_field_formatter_view($entity_type, $entity, $field, $instan
 function roycemodule_field_formatter_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items, $displays) {
   // Call prepare view formatter for a taxonomy term
   taxonomy_field_formatter_prepare_view($entity_type, $entities, $field, $instances, $langcode, $items, $displays);
+}
+
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ */
+function roycemodule_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['profile']->editor == 'ckeditor') {
+    $settings['allowedContent'] = TRUE;
+  }
 }
 
