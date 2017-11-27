@@ -1,7 +1,19 @@
 .footer-info {
   @include breakpoint($lapish) {
-    @include grid-span(7, 1, $gutter: 4);
+    @include grid-span(9, 1, $gutter: 4);
   }
+
+  .block-block {
+    float: left;
+    &:nth-of-type(1) {
+      width: 31%;
+    }
+    &:nth-of-type(2) {
+      width: 69%;
+    }
+  }
+
+
 }
 .footer-social {
   @include breakpoint($lapish) {

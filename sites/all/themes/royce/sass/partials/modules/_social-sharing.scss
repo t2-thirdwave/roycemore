@@ -1,4 +1,4 @@
-.royce-facebook, .royce-instagram, .royce-twitter {
+.royce-facebook, .royce-instagram, .royce-twitter, .royce-youtube {
   background-image: url(/sites/all/themes/royce/images/Facebook.svg);
   text-indent: -9999em;
   display: inline-block;
@@ -28,6 +28,13 @@
   margin-right: 0;
 }
 
+.royce-youtube {
+  background-image: url(/sites/all/themes/royce/images/youtube.svg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  margin-right: 0;
+}
+
 .footer-social {
   text-align: center;
   margin-top: 48px;
@@ -46,7 +53,7 @@
     }
   }
 
-  .royce-facebook, .royce-instagram, .royce-twitter {
+  .royce-facebook, .royce-instagram, .royce-twitter, .royce-youtube {
     height: 48px;
     width: 48px;
     background-size: 48px;
